@@ -1,5 +1,8 @@
 body {
     background-color: rgb(232, 232, 223);
+}
+
+h1, h2, h3, p {
     font-family: 'Courier New', Courier;
     color:rgb(34, 119, 122)
 }
