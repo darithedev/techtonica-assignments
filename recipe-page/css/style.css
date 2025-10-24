@@ -7,3 +7,6 @@ h1, h2, h3, p {
     color:rgb(34, 119, 122)
 }
 
+.description {
+    width: 600px;
+}
