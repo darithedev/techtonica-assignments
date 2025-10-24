@@ -17,4 +17,5 @@ img {
 
 .left {
     width: 600px;
+    float: left;
 }
