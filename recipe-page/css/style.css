@@ -1,5 +1,6 @@
 body {
     background-color: rgb(232, 232, 223);
+    margin: 50px;
 }
 
 h1, h2, h3, p {
@@ -7,3 +8,21 @@ h1, h2, h3, p {
     color:rgb(34, 119, 122)
 }
 
+img {
+    border-radius: 50px;
+}
+
+.description {
+    width: 600px;
+}
+
+.left {
+    width: 600px;
+    float: left;
+}
+
+.right {
+    width: 600px;
+    float: left;
+    margin-left: 40px;
+}
