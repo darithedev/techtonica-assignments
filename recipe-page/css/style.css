@@ -3,7 +3,7 @@ body {
     padding: 30px;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, .container-fluid {
     font-family: 'Courier New', Courier;
     color:rgb(34, 119, 122)
 }
@@ -16,11 +16,28 @@ img {
     width: 600px;
 }
 
-.left {
-    width: 600px;
-    float: left;
-}
-
 .right {
     padding-left: 100px;
+}
+
+.container-fluid {
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.navBar {
+    background-color:rgb(34, 119, 122, 0.6);
+    padding: 5px;
+}
+
+.btn-outline-success {
+    background-color: rgb(232, 232, 223);
+    color: rgb(34, 119, 122);
+    border-color: rgb(232, 232, 223);
+}
+
+.btn-outline-success:hover {
+    background-color:rgb(34, 119, 122);
+    color: rgb(232, 232, 223);
+    border-color: rgb(34, 119, 122);
 }
