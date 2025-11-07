@@ -43,4 +43,6 @@ img {
 
 .btn-outline-success:hover {
     background-color:rgb(34, 119, 122);
+    color: rgb(232, 232, 223);
+    border-color: rgb(34, 119, 122);
 }
