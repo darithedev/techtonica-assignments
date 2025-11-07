@@ -40,3 +40,7 @@ img {
     color: rgb(34, 119, 122);
     border-color: rgb(232, 232, 223);
 }
+
+.btn-outline-success:hover {
+    background-color:rgb(34, 119, 122);
+}
