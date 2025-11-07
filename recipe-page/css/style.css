@@ -3,7 +3,7 @@ body {
     padding: 30px;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, .container-fluid {
     font-family: 'Courier New', Courier;
     color:rgb(34, 119, 122)
 }
