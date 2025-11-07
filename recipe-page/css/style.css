@@ -38,4 +38,5 @@ img {
 .btn-outline-success {
     background-color: rgb(232, 232, 223);
     color: rgb(34, 119, 122);
+    border-color: rgb(232, 232, 223);
 }
