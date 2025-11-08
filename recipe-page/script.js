@@ -29,3 +29,6 @@ for (let i = 0; i < list.length; i++) {
         }
     });
 }
+
+const instructions = document.querySelector('ol');
+const listInst = instructions.querySelectorAll('li');
