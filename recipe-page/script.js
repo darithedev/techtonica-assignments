@@ -1,5 +1,2 @@
-function hello() {
-    alert('Hello, world!')
-}
-
-window.addEventListener('DOMContentLoaded', hello);
+const ingredients = document.querySelector('ul.ingredients');
+const list = ingredients.querySelectorAll('li');
