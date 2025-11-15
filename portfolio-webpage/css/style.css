@@ -9,5 +9,9 @@ body {
     font-size: medium !important;
     background-color: yellow !important;
 }
+
+#space {
+    padding-right: 10px;
+}
 /* This color is niceeeee!
 background-color: #2e4140; */
