@@ -1,0 +1,17 @@
+body {
+    background: bisque;
+    /*background: #fab1a0;*/
+}
+
+.text-body.link:hover {
+    color: red !important;
+    text-decoration: line-through;
+    font-size: medium;
+    background-color: yellow;
+}
+
+#space {
+    padding-right: 10px;
+}
+/* This color is niceeeee!
+background-color: #2e4140; */
