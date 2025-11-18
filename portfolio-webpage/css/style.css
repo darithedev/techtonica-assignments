@@ -3,11 +3,11 @@ body {
     /*background: #fab1a0;*/
 }
 
-.links a.text-decoration-none.text-body.link:hover {
+.text-body.link:hover {
     color: red !important;
-    text-decoration: line-through !important;
-    font-size: medium !important;
-    background-color: yellow !important;
+    text-decoration: line-through;
+    font-size: medium;
+    background-color: yellow;
 }
 
 #space {
