@@ -15,3 +15,7 @@ body {
 }
 /* This color is niceeeee!
 background-color: #2e4140; */
+
+#profilePhoto {
+    width: 100%;
+}
