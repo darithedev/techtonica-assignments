@@ -4,37 +4,48 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Dari's Portfolio Webpage</title>
-        <!--- <link rel="icon" href="./favicon.ico" type="image/x-icon"> --->
-
+        <title>Dari Caceres | Software Engineer</title>
+        <link rel="icon" href="src/favicon.ico" type="image/x-icon">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
         <!-- CSS Stylesheet-->
         <link rel="stylesheet" href="css/style.css">
+        <!-- Groogle Inter Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Devicon.io Icons for Technologies Used-->
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     </head>
     <body>
         <header>
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
                     <div class="row">
                         <a class="navbar-brand" href="#">Dari Caceres</a>
                         <span>Software Developer</span>
                     </div>
                     <div class="links ms-auto">
-                        <a class="text-body link" id="space" href="#">Work</a>
-                        <a class="text-body link" href="#">hello@dari.dev</a>
+                        <a class="text-body link space" href="#works">Work</a>
+                        <a class="text-body link space" href="#">hello@dari.dev</a>
+                        <a class="space text-decoration-none" href="https://linkedin.com/in/daricaceres">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="Image of LinkedIn logo" style="width: 25px;"/>
+                        </a>
+                        <a class="space" href="https://github.com/darithedev">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Image of GitHub logo" style="width: 25px;"/>
+                        </a>
                     </div>
                 </nav>
             </div>
         </header>
         <main>
+            <!-- Hero Section -->
             <div class="container">
                 <div class="row" id="hero">
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <img src="./src/dari.jpeg" class="rounded-circle" id="profilePhoto" alt="Cartoon image of Dari, a hispanic woman with curly hair and she is smiling.">
                     </div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-8">
                         <h1>Hi, I'm Dari 👋🏽</h1>
                         <p>
                             I'm a Software Engineer with x years of experience building full-stack applications.
@@ -45,35 +56,83 @@
                     </div>
                 </div>
                 <!--- Projects Section -->
-                <div class="row" id="works">
-                    <div class="col-12">
-                        <div class="row justify-content-center">
-                            <div class="col-3 projects" id="project1">
-                                <h3>QuizBuddy</h3>
-                                <span>Quiz Taking Web Application</span>
-                                <p><strong>Full-stack Developer</strong></p>
-                                <p>This is a free full-stack web application for creating and saving self-administered quizzes.</p>
-                                <p>Technologies Used: JavaScript, React, SCSS, Bootstrap / React Bootstrap, Next.js, Node.js, Vercel, Supabase, GitHub</p>
+                <section id="works">
+                    <div class="container">
+                        <div class="row g-4">
+                            <div class="col-12 col-md-6">  
+                                <div class="projects h-100" id="project1">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <h3>QuizBuddy</h3>
+                                        <a class="text-body" href="https://quiz-buddy-web.vercel.app/">
+                                            <img src="./src/vercel-icon-light.png" id="vercelLogo" alt="Image of Vercel Logo." style="width:30px;">
+                                        </a>
+                                    </div>
+                                    <span>Quiz Taking Web Application</span>
+                                    <p><strong>Full-stack Developer</strong></p>
+                                    <img src="src/quizBuddy_Logo-removebg.png" alt="Image of QuizBuddy logo, a self-administered test taking web app, with background removed" style="max-width: 100%; margin-bottom: 15px" />
+                                    <p>QuizBuddy is a free full-stack web application for creating and saving self-administered quizzes.</p>
+                                    <p><strong>Technologies Used:</strong></p>
+                                    <div class="d-flex flex-row flex-wrap">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Image of JavaScript logo" style="width: 50px;"/>   
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" alt="Image of React logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt="Image of SASS logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="Image of Bootstrap logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactbootstrap/reactbootstrap-original.svg" alt="Image of React Bootstrap logo" style="width: 50px"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Image of Next.js logo" style="width: 50px"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Image of Node.js logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="Image of Supabase logo" style="width: 50px"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Image of GitHub logo" style="width: 50px"/>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-3 projects" id="project2">
-                                <h3>Spending Checkpoint</h3>
-                                <span>Shopping buddy chrome extension</span>
-                                <p><strong>Web Developer</strong></p>
-                                <p>Meet Penny, your chrome extension shopping buddy that helps you mentally checkin before you complete your online purchase.</p>
-                                <p>Technologies used: HTML5, CSS2, JavaScript, Google Chrome </p>
-                                <p>1st place - 2025 GDI Hackathon Winner</p>
+                            <div class="col-12 col-md-6">
+                                <div class="projects h-100" id="project2">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <h3>Spending Checkpoint</h3>
+                                        <a href="https://github.com/ggrossvi/spending-checkpoint">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Image of GitHub logo" style="width: 30px"/>
+                                        </a>
+                                    </div>
+                                    <span>Shopping buddy chrome extension</span>
+                                    <p><strong>Web Developer</strong></p>
+                                    <img src="src/spendingCheckpoint.png" alt="Image of Spending Checkpoint" style="border-radius: 15px; max-width: 100%; margin-bottom: 25px;"/>
+                                    <p>Meet Penny, your chrome extension shopping buddy that helps you mentally checkin before you complete your online purchase.</p>
+                                    <p><strong>Technologies used:</strong></p>
+                                    <div class="d-flex flex-row flex-wrap" id="project2Tech">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="Image of HTML5 logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="Image of CSS3 logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Image of JavaScript Logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original-wordmark.svg" alt="Image of Google Chrome Logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Image of GitHub Logo" style="width: 50px"/>
+                                    </div>
+                                    <p>1st place - 2025 GDI Hackathon Winner</p>
+                                </div>
                             </div>
-                            <div class="col-3 projects" id="project3">
-                                <h3>Recipe Page</h3>
-                                <span>Carne Frita Recipe Page</span>
-                                <p><strong>Web Developer</strong></p>
-                                <p>This is a recipe page complete with easy to follow ingredients and instructions checklists, and linked an instructional video.</p>
-                                <p>Technologies used: HTML5, css2, Bootstrap, JavaScript, GitHub</p>
+                            <div class="col-12 col-md-6">
+                                <div class="projects h-100" id="project3">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <h3>Recipe Page</h3>
+                                        <a href="https://github.com/darithedev/techtonica-assignments/tree/main/recipe-page">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Image of GitHub logo" style="width: 30px"/>
+                                        </a>
+                                    </div>
+                                    <span>Carne Frita Recipe Page</span>
+                                    <p><strong>Web Developer</strong></p>
+                                    <img src="src/recipe_page.png" style="max-width: 100%; border-radius: 15px; margin-bottom: 20px" alt="Image of Carne Frita Recipe Webpage"/>
+                                    <p>This is a recipe page complete with easy to follow ingredients and instructions checklists, and linked an instructional video.</p>
+                                    <p><strong>Technologies used:</strong></p>
+                                    <div class="d-flex flex-row flex-wrap">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="Image of HTML5 logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="Image of CSS3 logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="Image of Bootstrap logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Image of JavaScript Logo" style="width: 50px;"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Image of GitHub Logo" style="width: 50px"/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
+                </section>
             </div>
         </main>
         <footer>

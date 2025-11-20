@@ -1,6 +1,14 @@
 body {
     background: bisque;
-    /*background: #fab1a0;*/
+    /*background: #fab1a0;
+    background-color: #2e4140;*/
+    scroll-behavior: smooth;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    padding-bottom: 15px;
 }
 #hero {
     align-items: center;
@@ -26,13 +34,21 @@ body {
     margin-top: 50px;
 }
 
-
-#space {
+.space {
     padding-right: 10px;
 }
-/* This color is niceeeee!
-background-color: #2e4140; */
 
 #profilePhoto {
     width: 100%;
+}
+
+.projects {
+    background-color: rgba(122, 195, 237, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+   
+}
+
+#project2Tech {
+    padding-bottom: 15px;
 }
