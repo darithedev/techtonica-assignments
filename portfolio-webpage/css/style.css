@@ -8,6 +8,7 @@ body {
 
 .container {
     max-width: 1000px;
+    padding-bottom: 15px;
 }
 
 .text-body.link:hover {
@@ -30,4 +31,8 @@ body {
     border-radius: 15px;
     padding: 25px;
    
+}
+
+#project2Tech {
+    padding-bottom: 15px;
 }
