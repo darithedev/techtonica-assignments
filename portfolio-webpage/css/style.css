@@ -3,6 +3,7 @@ body {
     /*background: #fab1a0;
     background-color: #2e4140;*/
     scroll-behavior: smooth;
+    font-family: 'Inter Tight', sans-serif;
 }
 
 .text-body.link:hover {
