@@ -42,6 +42,10 @@ body {
     width: 100%;
 }
 
+.col-12.col-md-4 {
+    width: 25%;
+}
+
 .projects {
     background-color: rgba(122, 195, 237, 0.2);
     border-radius: 15px;
@@ -51,4 +55,19 @@ body {
 
 #project2Tech {
     padding-bottom: 15px;
+}
+
+@media (max-width: 750px) {
+    .navbar-collapse {
+        background: rgba(122, 195, 237, 0.2);
+        padding: 10px;
+        border-radius: 15px;
+        margin-top: 8px;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
