@@ -19,6 +19,7 @@
     </head>
     <body>
         <header>
+            <!-- Navbar -->
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <div class="row">
@@ -31,7 +32,7 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navBar">
                         <div class="navbar-nav ms-auto">
                             <a class="text-body link space" href="#works">Work</a>
-                            <a class="text-body link space" href="#">hello@dari.dev</a>
+                            <a class="text-body link space" href="#contact">hello@dari.dev</a>
                         </div>
                         <a class="space text-decoration-none" href="https://linkedin.com/in/daricaceres">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="Image of LinkedIn logo" style="width: 25px;"/>
@@ -44,14 +45,14 @@
             </div>
         </header>
         <main>
-            <!-- Hero Section -->
+            <!-- Hero Container -->
             <div class="container">
                 <section id="hero">
                     <div class="row">
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-md-4 d-flex justify-content-center">
                             <img src="./src/dari.jpeg" class="rounded-circle" style="margin-bottom: 30px" id="profilePhoto" alt="Cartoon image of Dari, a hispanic woman with curly hair and she is smiling.">
                         </div>
-                        <div class="col-12 col-md-8">
+                        <div class="col-12 col-md-8 d-flex flex-column justify-content-center">
                             <h1>Hi, I'm Dari 👋🏽</h1>
                             <p>
                                 I'm a Software Engineer with x years of experience building full-stack applications.
@@ -66,7 +67,8 @@
                 <section id="works">
                     <div class="container">
                         <div class="row g-4">
-                            <div class="col-12 col-md-6">  
+                            <!-- Project 1 -->  
+                            <div class="col-12 col-md-4">
                                 <div class="projects h-100" id="project1">
                                     <div class="d-flex flex-row justify-content-between">
                                         <h3>QuizBuddy</h3>
@@ -95,7 +97,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <!-- Project 2 -->  
+                            <div class="col-12 col-md-4">
                                 <div class="projects h-100" id="project2">
                                     <div class="d-flex flex-row justify-content-between">
                                         <h3>Spending Checkpoint</h3>
@@ -120,7 +123,8 @@
                                     <p>1st place - 2025 GDI Hackathon Winner</p>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <!-- Project 3 -->  
+                            <div class="col-12 col-md-4">
                                 <div class="projects h-100" id="project3">
                                     <div class="d-flex flex-row justify-content-between">
                                         <h3>Recipe Page</h3>
@@ -144,8 +148,42 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> <!-- End Project Rows -->
                     </div>
+                </section>
+            </div>
+            <!-- Form Container -->
+            <div class="container">
+                <section id="contact">
+                    <div class="d-flex justify-content-center" id="formTitle">
+                        <h2>Lets Stay Connected!</h2>
+                    </div>
+                    <form action="" method="GET" class="contactForm">
+                        <div class="contactForm">
+                            <label for="name">Enter Your Name: </label>
+                            <input type="text" name="name" id="name" placeholder="John Wick" required />
+                        </div>
+                        <div class="contactForm">
+                            <label for="email">Enter Your Email: </label>
+                            <input type="email" name="email" id="email" placeholder="wick@mail.com" required />
+                        </div>
+                        <div class="contactForm">
+                            <label for="number">Enter Your Phone Number: </label>
+                            <input type="number" name="number" id="number" placeholder="9018139082"/>
+                        </div>
+                        <div class="contactForm">
+                            <label class="address">Enter Your Address: </label>
+                            <input type="text" name="address" id="address" placeholder="1 Wall Street Court" />
+                            <input type="text" name="city" id="city" placeholder="New York" />
+                            <input type="text" name="state" id="state" placeholder="NY" />
+                            <input type="number" name="zipcode" id="zipcode" placeholder="10005" />
+                        </div>
+                        <div class="contactForm">
+                            <button>
+                                <input type="submit" value="Submit" />
+                            </button>
+                        </div>
+                    </form>
                 </section>
             </div>
         </main>
@@ -153,5 +191,7 @@
         </footer>
         <!--  jQuery, Popper.js and Bootstrap JS plugins -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+        <!-- Javascript script.js -->
+        <script src="script.js"></script>
     </body>
 </html>
