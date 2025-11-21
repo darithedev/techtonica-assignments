@@ -109,9 +109,8 @@ body {
     background-color: bisque;
     border: none;
     border-radius: 10px;
-    margin-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 50px;
+    padding: 24px;
 }
 
 .contactForm button:hover {
