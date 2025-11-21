@@ -12,14 +12,35 @@ body {
 }
 
 .text-body.link:hover {
-    color: red !important;
+    color: navy !important;
     text-decoration: line-through;
     font-size: medium;
-    background-color: yellow;
+    background-color: rgba(122, 195, 237, 0.2);
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .space {
     padding-right: 10px;
+}
+
+@media (max-width: 750px) {
+    .navbar-collapse {
+        background: rgba(122, 195, 237, 0.2);
+        padding: 10px;
+        border-radius: 15px;
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .link {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    
 }
 
 #hero {
@@ -32,6 +53,7 @@ body {
     width: 80%;
     padding-bottom: 20px;
     max-width: 150px;
+    border-radius: 50%;
     transition: box-shadow 0.3s ease;
 }
 
@@ -64,18 +86,6 @@ body {
 
 #project2Tech {
     padding-bottom: 25px;
-}
-
-@media (max-width: 750px) {
-    .navbar-collapse {
-        background: rgba(122, 195, 237, 0.2);
-        padding: 10px;
-        border-radius: 15px;
-        margin-top: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
 }
 
 #formTitle {
