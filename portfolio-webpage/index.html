@@ -54,12 +54,14 @@
                             <a class="text-body link space" href="#works">Work</a>
                             <a class="text-body link space" href="#contact">hello@dari.dev</a>
                         </div>
-                        <a class="space text-decoration-none" href="https://linkedin.com/in/daricaceres">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="Image of LinkedIn logo" style="width: 25px;"/>
-                        </a>
-                        <a class="space" href="https://github.com/darithedev">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Image of GitHub logo" style="width: 25px;"/>
-                        </a>
+                        <div class="d-flex flex-row" id="nav-socials">
+                            <a class="space text-decoration-none socials" href="https://linkedin.com/in/daricaceres">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="Image of LinkedIn logo" style="width: 25px;"/>
+                            </a>
+                            <a class="space socials" href="https://github.com/darithedev">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Image of GitHub logo" style="width: 25px;"/>
+                            </a>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -70,7 +72,7 @@
                 <section id="hero">
                     <div class="row">
                         <div class="col-12 col-md-4 d-flex justify-content-center">
-                            <img src="./src/dari.jpeg" class="rounded-circle" style="margin-bottom: 30px" id="profilePhoto" alt="Cartoon image of Dari, a hispanic woman with curly hair and she is smiling.">
+                            <img src="./src/dari.jpeg" style="margin-bottom: 30px" id="profilePhoto" alt="Cartoon image of Dari, a hispanic woman with curly hair and she is smiling.">
                         </div>
                         <div class="col-12 col-md-8 d-flex flex-column justify-content-center">
                             <h1>Hi, I'm Dari 👋🏽</h1>
@@ -180,23 +182,20 @@
                     </div>
                     <form action="" method="GET" class="contactForm">
                         <div class="contactForm">
-                            <label for="name">Enter Your Name: </label>
+                            <label for="name">Name: </label>
                             <input type="text" name="name" id="name" placeholder="John Wick" required />
                         </div>
                         <div class="contactForm">
-                            <label for="email">Enter Your Email: </label>
+                            <label for="email">Email: </label>
                             <input type="email" name="email" id="email" placeholder="wick@mail.com" required />
                         </div>
                         <div class="contactForm">
-                            <label for="number">Enter Your Phone Number: </label>
+                            <label for="number">Phone Number: </label>
                             <input type="number" name="number" id="number" placeholder="9018139082"/>
                         </div>
                         <div class="contactForm">
-                            <label class="address">Enter Your Address: </label>
-                            <input type="text" name="address" id="address" placeholder="1 Wall Street Court" />
-                            <input type="text" name="city" id="city" placeholder="New York" />
-                            <input type="text" name="state" id="state" placeholder="NY" />
-                            <input type="number" name="zipcode" id="zipcode" placeholder="10005" />
+                            <label class="note">Note: </label>
+                            <input type="text" name="note" id="note" placeholder="Say hello" />
                         </div>
                         <div class="contactForm">
                             <button type="submit">Submit</button>
