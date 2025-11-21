@@ -63,9 +63,6 @@ body {
         padding: 10px;
         border-radius: 15px;
         margin-top: 8px;
-    }
-
-    .navbar-collapse {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
