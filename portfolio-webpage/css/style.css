@@ -77,3 +77,55 @@ body {
         align-items: flex-end;
     }
 }
+
+#formTitle {
+    margin-bottom: 15px;
+}
+
+#contact {
+    margin-top: 35px;
+    padding: 35px;
+    border-radius: 15px;
+    background-color: rgba(122, 195, 237, 0.2);
+}
+
+.contactForm {
+    margin-bottom: 20px;
+}
+
+.contactForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contactForm input {
+    background-color: bisque;
+    border: none;
+    border-radius: 10px;;
+    padding: 10px;
+}
+
+.contactForm button {
+    background-color: bisque;
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contactForm button:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+    #address {
+        margin-bottom: 10px;
+    }
+    #city {
+        margin-bottom: 10px;
+    }
+    #state {
+        margin-bottom: 10px;
+    }
+}
