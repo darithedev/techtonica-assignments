@@ -105,26 +105,28 @@ body {
     padding: 10px;
 }
 
+.contactForm input#note {
+    height: 200px;
+    width: 50%;
+    padding-bottom: 150px;
+}
+
+@media (max-width: 750px) {
+    .contactForm input#note {
+        height: 200px;
+        width: 100%;
+        padding-bottom: 150px;
+    }  
+}
+
 .contactForm button {
     background-color: bisque;
     border: none;
     border-radius: 10px;
-    margin: 50px;
+    margin-top: 26px;
     padding: 24px;
 }
 
 .contactForm button:hover {
     box-shadow: 0 0 15px rgba(0,0,0,0.25);
-}
-
-@media (max-width: 768px) {
-    #address {
-        margin-bottom: 10px;
-    }
-    #city {
-        margin-bottom: 10px;
-    }
-    #state {
-        margin-bottom: 10px;
-    }
 }
