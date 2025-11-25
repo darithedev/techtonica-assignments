@@ -4,4 +4,8 @@ const outcome = document.getElementById('outcome');
 
 flip.addEventListener('click', function () {
 
+    function flipCoin () {
+        return Math.floor(Math.random() * 2);
+    }
+
 });
