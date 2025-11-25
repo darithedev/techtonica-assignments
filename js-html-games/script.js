@@ -33,3 +33,8 @@ decrease.addEventListener('click', function () {
 
 function flipCoins() {
 }
+
+reset.addEventListener('click', function () {
+    outcome.textContent = '';
+    flippedCoins.textContent = '';
+});
