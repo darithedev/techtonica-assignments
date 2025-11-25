@@ -21,4 +21,12 @@ flip.addEventListener('click', function () {
         coin.textContent = '( tails )'
         outcome.textContent = 'You got tails!'
     }
+}); 
+
+increase.addEventListener('click', function () {
+    coins.value++;
+});
+
+decrease.addEventListener('click', function () {
+    coins.value--;
 });
