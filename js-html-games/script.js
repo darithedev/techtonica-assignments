@@ -8,8 +8,10 @@ const decrease = document.getElementById('decrease');
 const flippedCoins = document.getElementById('flippedCoins');
 const reset = document.getElementById('reset');
 
+let coinArr = ['heads', 'tails'];
+
 function flipCoin () {
-    return Math.floor(Math.random() * 2);
+    return Math.floor(Math.random() * coinArr.length);
 }
 
 flip.addEventListener('click', function () {
