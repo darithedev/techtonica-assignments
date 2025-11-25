@@ -2,11 +2,11 @@ const coin = document.getElementById('coin');
 const flip = document.getElementById('flip');
 const outcome = document.getElementById('outcome');
 
-flip.addEventListener('click', function () {
+function flipCoin () {
+    return Math.floor(Math.random() * 2);
+}
 
-    function flipCoin () {
-        return Math.floor(Math.random() * 2);
-    }
+flip.addEventListener('click', function () {
 
     if(flipCoin() === 0) {
         coin.textContent = '( heads )'
