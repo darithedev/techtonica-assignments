@@ -5,7 +5,7 @@ const outcome = document.getElementById('outcome');
 const coins = document.getElementById('coins');
 const increase = document.getElementById('increase');
 const decrease = document.getElementById('decrease');
-const flippedCoins = document.getElementById('flipped');
+const flippedCoins = document.getElementById('flippedCoins');
 const reset = document.getElementById('reset');
 
 function flipCoin () {
@@ -30,3 +30,6 @@ increase.addEventListener('click', function () {
 decrease.addEventListener('click', function () {
     coins.value--;
 });
+
+function flipCoins() {
+}
