@@ -2,6 +2,12 @@ const coin = document.getElementById('coin');
 const flip = document.getElementById('flip');
 const outcome = document.getElementById('outcome');
 
+const coins = document.getElementById('coins');
+const increase = document.getElementById('increase');
+const decrease = document.getElementById('decrease');
+const flippedCoins = document.getElementById('flipped');
+const reset = document.getElementById('reset');
+
 function flipCoin () {
     return Math.floor(Math.random() * 2);
 }
