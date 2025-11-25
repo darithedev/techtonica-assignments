@@ -32,6 +32,15 @@ decrease.addEventListener('click', function () {
 });
 
 function flipCoins() {
+    const coinsToFlip = coins.value;
+
+    for (let i = 1; i <= coinsToFlip; i++) {
+        if(flipCoin() === 0) {
+            flippedCoins.textContent += `Coin ${i}: ( heads ) \n You got heads! \n\n`
+        } else {
+            flippedCoins.textContent += `Coin ${i}: ( tails ) \n You got tails! \n\n`
+        }
+    }
 }
 
 reset.addEventListener('click', function () {
