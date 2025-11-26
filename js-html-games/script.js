@@ -9,6 +9,7 @@ const flippedCoins = document.getElementById('flippedCoins');
 const reset = document.getElementById('reset');
 
 let coinArr = ['heads', 'tails'];
+let coinStack = [];
 
 function flipCoin () {
     return Math.floor(Math.random() * coinArr.length);
