@@ -55,4 +55,5 @@ reset.addEventListener('click', function () {
     coins.value = 0;
     outcome.textContent = '';
     flippedCoins.textContent = '';
+    coinStack = [];
 });
