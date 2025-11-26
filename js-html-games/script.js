@@ -44,6 +44,11 @@ function flipCoins() {
             coinStack.push(coinArr[1]); // tails
         }
     }
+
+    flippedCoins.textContent = `These are your ${coinsToFlip} flipped coins: \n`;
+    coinStack.forEach(function(element, index) {
+        flippedCoins.textContent += `Coin ${index + 1}: ( ${element} ) \n\n`
+    });
 }
 
 reset.addEventListener('click', function () {
