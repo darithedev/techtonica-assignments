@@ -31,7 +31,9 @@ increase.addEventListener('click', function () {
 });
 
 decrease.addEventListener('click', function () {
-    coins.value--;
+    if (coins.value > 0) {
+        coins.value--;
+    }
 });
 
 function flipCoins() {
@@ -52,6 +54,7 @@ function flipCoins() {
 }
 
 reset.addEventListener('click', function () {
+    coin.textContent = '( coin )'
     coins.value = 0;
     outcome.textContent = '';
     flippedCoins.textContent = '';
