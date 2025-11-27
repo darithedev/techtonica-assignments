@@ -26,8 +26,17 @@ flip.addEventListener('click', function () {
     }
 }); 
 
+coins.oninput = function() {
+    coins.value = coins.value.replace(/[^0-9]/g, '');
+    if (coins.value > 100) {
+        coins.value = 100;
+    }
+};
+
 increase.addEventListener('click', function () {
-    coins.value++;
+    if (coins.value < 100) {
+        coins.value++;
+    }
 });
 
 decrease.addEventListener('click', function () {
