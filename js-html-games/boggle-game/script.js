@@ -13,3 +13,16 @@ const superBoggle = document.getElementById('superBoggle');
 
 const submit = document.getElementById('submit');
 const reset = document.getElementById('reset');
+
+function boggleBoard(size) {
+    boardSetup.textContent = '';
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            //board.textContent += '[--]'
+            createLetterButtons();
+        }
+        // board.textContent += '\n'
+        board.appendChild(document.createElement('br'));
+    }
+    submit.hidden = false;
+}
