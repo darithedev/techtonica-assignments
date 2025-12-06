@@ -3,9 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Coin Flip Game</title>
     </head>
     <body>
-        
+        <h1>Welcome to The Coin Flip Game</h1>
+        <div id="singleFlip">
+            <p>1. Flip a single coin</p>
+            <div id="coin">( coin )</div>
+            <button id="flip">flip</button>
+            <p id="outcome"></p>
+        </div>
+        <p>----------------------------------</p>
+        <div id="multiFlip">
+            <p>2. Flip multiple coins</p>
+            <p>How many coins do you want to flip?(max 100 coins)</p>
+            <div>
+                <textarea type="number" id="coins" placeholder="0"></textarea>
+                <button id="increase">+</button>
+                <button id="decrease">-</button>
+                <div>
+                    <button type="button" onClick="flipCoins();">Submit</button>
+                </div>
+                <div id="flippedCoins" style="white-space: pre-line;"></div>
+            </div>
+        </div> 
+        <div>
+            <button id="reset">Reset</button>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
