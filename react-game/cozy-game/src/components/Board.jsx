@@ -1,8 +1,11 @@
-function Board () {
+import './Board.css'
+
+function Board ({ level }) {
 
     return (
-        <div>
-            
+        <div className="container">
+            <div className="game-board"></div>
+            <p className="level">You are on level: {level} </p>
         </div>
     )
 }
