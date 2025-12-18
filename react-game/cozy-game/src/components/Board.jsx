@@ -18,6 +18,19 @@ function Board ({ level }) {
         });
     };
 
+    useEffect(() => {
+        const handleKeys = (event) => {
+            if (event.key === 'ArrowUp') positon('top');
+            if (event.key === 'ArrowDown') positon('down');
+            if (event.key === 'ArrowLeft') positon('left');
+            if (event.key === 'ArrowRight') positon('right');
+            // if (event.key === 'Shift' && event.key === 'ArrowUp') {positon('top'); MOVEMENT = 35; };
+        };
+
+        window.addEventListener('keydown', handleKeys);
+        return () => window.removeEventListener('keydown', handleKeys);
+    }, []);
+
     return (
         <div className="container">
             <div className="game-board">
