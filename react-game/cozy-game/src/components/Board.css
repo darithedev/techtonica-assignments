@@ -18,3 +18,14 @@
     border-top-right-radius: 15px;
     border-bottom-left-radius: 75px
 }
+
+.nest-sprite {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    font-size: 6rem;
+}
+
+.duck-sprite {
+
+}
