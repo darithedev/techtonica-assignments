@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>Boggle Game</h1>
+        <h1>Capture the Chicks Game</h1>
       </div>
     </>
   )
