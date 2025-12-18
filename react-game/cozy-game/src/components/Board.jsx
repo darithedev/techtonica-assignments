@@ -4,7 +4,9 @@ function Board ({ level }) {
 
     return (
         <div className="container">
-            <div className="game-board"></div>
+            <div className="game-board">
+                <div className='land'></div>
+            </div>
             <p className="level">You are on level: {level} </p>
         </div>
     )
