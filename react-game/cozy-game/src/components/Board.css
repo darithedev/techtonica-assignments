@@ -27,5 +27,8 @@
 }
 
 .duck-sprite {
-
+    margin: 0;
+    position: absolute;
+    right: 0;
+    font-size: 4rem;
 }
