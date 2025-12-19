@@ -97,6 +97,7 @@ function Board ({ level }) {
 
     return (
         <div className="container">
+            <div className="score">Score: {score}</div>
             <div className="game-board">
                 <div className='land'></div>
                 <p className="nest-sprite">🪹</p>
