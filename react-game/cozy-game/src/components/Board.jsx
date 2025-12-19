@@ -53,6 +53,11 @@ function Board ({ level }) {
         });
     };
 
+    // Collision detection function to detect if duck and chick coordinates cross eachother
+    const collision = (duck, chick) => {
+        return (duck.x < chick.x + CHICK_SIZE && duck.x + DUCK_SIZE > chick.x && duck.y < chick.y + CHICK_SIZE && duck.y + DUCK_SIZE > chick.y);
+    };
+
     // Handles key press down events from keyboard user input
     useEffect(() => {
         const handleKeyDown = (event) => {
