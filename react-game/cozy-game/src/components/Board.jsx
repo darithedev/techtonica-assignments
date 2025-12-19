@@ -13,6 +13,7 @@ const CHICK_SIZE = 32; // Font size of chick 2rem
 const DUCK_SIZE = 64; // Font size of chick 4rem
 
 function Board ({ level }) {
+    const [score, setScore] = useState(0);
     // y increase moving down, x decreases moving left
     const [duck, setDuck] = useState({ x: 525, y: 0 });
     const chicksArr = ['🐤', '🐤', '🐤'];
@@ -78,6 +79,7 @@ function Board ({ level }) {
             prevChicks.map(chick => {
                 // Only if chick is displayed and duck and chick overlap (coordinates)
                 if (chick.display && collision(duck, chick)) {
+                    setScore(score + 1);
                     // Returns new object for chick that duck collides with
                     return {
                         ...chick,
