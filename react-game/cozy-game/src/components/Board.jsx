@@ -9,6 +9,9 @@ const MAX_X = 525 // right boundary
 
 const DUCK_MOVEMENT = 15; // movement in px
 
+const CHICK_SIZE = 32; // Font size of chick 2rem
+const DUCK_SIZE = 64; // Font size of chick 4rem
+
 function Board ({ level }) {
     // y increase moving down, x decreases moving left
     const [duck, setDuck] = useState({ x: 525, y: 0 });
