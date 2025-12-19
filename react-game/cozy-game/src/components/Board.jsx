@@ -8,9 +8,11 @@ const MIN_X = 5; // Left boundary
 const MAX_X = 525 // right boundary
 
 const DUCK_MOVEMENT = 15; // movement in px
+// const ENEMY_MOVEMENT = 5;
 
 const CHICK_SIZE = 32; // Font size of chick 2rem
 const DUCK_SIZE = 64; // Font size of chick 4rem
+// const ENEMY_SIZE = 128; // Font size of croc 8rem
 
 function Board ({ level, sprite }) {
     const [score, setScore] = useState(0);
@@ -59,6 +61,39 @@ function Board ({ level, sprite }) {
     // Collision detection function to detect if duck and chick coordinates cross eachother
     const collision = (duck, chick) => {
         return (duck.x < chick.x + CHICK_SIZE && duck.x + DUCK_SIZE > chick.x && duck.y < chick.y + CHICK_SIZE && duck.y + DUCK_SIZE > chick.y);
+    };
+
+    // Moves game to level 2 (there are only 2 levels in this game)
+    const level2 = () => {
+        setNextLevel(2); // sets the next level (level 2)
+        // Respawns the chicks, theres a better way but for the sake of this demo I reused it from chicks state
+        setChicks(
+            chicksArr.map((chick, i) => {
+                const { x, y } = randomPos();
+                // returns an object 
+                return {
+                    id: i, 
+                    sprite: chick,
+                    x,
+                    y,
+                    display: true
+                };
+            })
+        );
+        // Spawns the enemy sprite (only croc) and assignes random x, y position
+        setEnemies(
+            enemiesArr.map((enemy, i) => {
+                const { x, y } = randomPos();
+                // returns an object 
+                return {
+                    id: i, 
+                    sprite: enemy,
+                    x,
+                    y,
+                    display: true
+                };
+            })
+        );
     };
 
     // Handles key press down events from keyboard user input
