@@ -10,7 +10,10 @@ function App() {
   return (
     <>
       <h1>Capture the Chicks Game</h1>
-      <Board level="1"/>
+      <Board 
+        character={character} 
+        level={level}
+      />
     </>
   )
 }
