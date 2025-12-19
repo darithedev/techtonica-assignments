@@ -12,7 +12,7 @@ const DUCK_MOVEMENT = 15; // movement in px
 const CHICK_SIZE = 32; // Font size of chick 2rem
 const DUCK_SIZE = 64; // Font size of chick 4rem
 
-function Board ({ level }) {
+function Board ({ level, sprite }) {
     const [score, setScore] = useState(0);
     // y increase moving down, x decreases moving left
     const [duck, setDuck] = useState({ x: 525, y: 0 });
@@ -101,7 +101,7 @@ function Board ({ level }) {
             <div className="game-board">
                 <div className='land'></div>
                 <p className="nest-sprite">🪹</p>
-                <p className="duck-sprite" style={{ left: `${duck.x}px`, top: `${duck.y}px`}}>🦆</p>
+                <p className="duck-sprite" style={{ left: `${duck.x}px`, top: `${duck.y}px`}}>{sprite}</p>
                 {chicks
                     .filter(chick => chick.display)
                     .map(chick => (
