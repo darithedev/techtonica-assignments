@@ -4,15 +4,15 @@ import './Board.css'
 function Board ({ level }) {
     /* y is positive going down (y increase moving down)
        x negative going left (x decreases to the left) */
-    const [duck, setDuck] = useState({ x: 0, y: 0 });
+    const [duck, setDuck] = useState({ x: 525, y: 0 });
 
     const MOVEMENT = 20; // movement in px
 
     // Boundaries of the game map
     const MIN_Y = -5; // Top boundary
     const MAX_Y = 400; // Bottom boundary
-    const MIN_X = -525; // Left boundary
-    const MAX_X = 0; // right boundary
+    const MIN_X = 5; // Left boundary
+    const MAX_X = 525 // right boundary
 
     const positon = (pos) => {
         setDuck((prevPos) => {
