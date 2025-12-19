@@ -3,14 +3,13 @@ import './App.css'
 import Board from './components/Board'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const characters = ["🦆","🦩","🦢"];
+  const [character, setCharacter] = useState("");
 
   return (
     <>
-      <div>
-        <h1>Capture the Chicks Game</h1>
-        <Board level="1"/>
-      </div>
+      <h1>Capture the Chicks Game</h1>
+      <Board level="1"/>
     </>
   )
 }
