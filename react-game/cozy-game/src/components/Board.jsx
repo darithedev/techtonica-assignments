@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import './Board.css'
 
 function Board ({ level }) {
+    /* y is positive going down (y increase moving down)
+       x negative going left (x decreases to the left) */
     const [duck, setDuck] = useState({ x: 0, y: 0 });
 
     const MOVEMENT = 20; // movement in px
@@ -9,10 +11,15 @@ function Board ({ level }) {
         setDuck((prevPos) => {
             let { x, y } = prevPos;
 
-            if (pos === 'top' && y > -5) y -= MOVEMENT;
-            if (pos === 'down' && y < 400) y += MOVEMENT;
-            if (pos === 'left' && x > -525) x -= MOVEMENT;
-            if (pos === 'right' && x < 0) x += MOVEMENT;
+            const MIN_Y = -5;
+            const MAX_Y = 410;
+            const MIN_X = -525;
+            const MAX_X = 0;
+
+            if (pos === 'top' && y > MIN_Y) y -= MOVEMENT;
+            if (pos === 'down' && y < MAX_Y) y += MOVEMENT;
+            if (pos === 'left' && x > MIN_X) x -= MOVEMENT;
+            if (pos === 'right' && x < MAX_X) x += MOVEMENT;
 
             return { x, y };
         });
