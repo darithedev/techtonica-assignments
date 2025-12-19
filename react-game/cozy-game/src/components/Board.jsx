@@ -5,6 +5,7 @@ function Board ({ level }) {
     /* y is positive going down (y increase moving down)
        x negative going left (x decreases to the left) */
     const [duck, setDuck] = useState({ x: 525, y: 0 });
+    const chicksArr = ['🐤', '🐤', '🐤'];
 
     const MOVEMENT = 20; // movement in px
 
