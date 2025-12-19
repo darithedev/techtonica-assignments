@@ -28,6 +28,11 @@ function Board ({ level }) {
         });
     };
 
+    const randomPos = () => ({
+        x: Math.floor(Math.random() * 450),
+        y: Math.floor(Math.random() * 450),
+    });
+
     useEffect(() => {
         const handleKeys = (event) => {
             if (event.key === 'ArrowUp') positon('top');
