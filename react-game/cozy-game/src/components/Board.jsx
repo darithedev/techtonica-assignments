@@ -72,6 +72,24 @@ function Board ({ level }) {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, []);
 
+    // Check for collisions for every duck movement and change chick display to false if collision true
+    useEffect(() => {
+        setChicks((prevChicks) => 
+            prevChicks.map(chick => {
+                // Only if chick is displayed and duck and chick overlap (coordinates)
+                if (chick.display && collision(duck, chick)) {
+                    // Returns new object for chick that duck collides with
+                    return {
+                        ...chick,
+                        display: false
+                    };
+                }
+                // Else just return chick object unchanged
+                return chick;
+            })
+        );
+    }, [duck]);
+
     // console.log(chicks);
     console.log(duck);
 
