@@ -16,6 +16,13 @@ function App() {
     "You move on to the next level once all baby chicks are collected.",
     "Be careful not to get eaten by the crocodile! Three bites and the game is over!"
   ];
+  const [gameOver, setGameOver] = useState(false);
+
+  // 'Se Acabo' is spanish for its done or its over
+  const seAcabo = () => {
+    setGameOver(true);
+    window.location.reload();
+  };
 
   return (
     <>
@@ -53,10 +60,13 @@ function App() {
           ))}
         </>
       ) : (
-        <Board 
-          level={level} 
-          sprite={character} 
-        />
+        <>
+          <Board 
+            level={level} 
+            sprite={character} 
+          />
+          <button className='end-game-button' onClick={() => seAcabo()}>End Game</button>
+        </>
       )}
     </>
   )
