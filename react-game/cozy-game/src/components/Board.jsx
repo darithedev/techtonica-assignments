@@ -33,6 +33,18 @@ function Board ({ level }) {
         y: Math.floor(Math.random() * 450),
     });
 
+    const [chicks, setChicks] = useState(() => 
+        chicksArr.map((chick, i) => {
+            const { x, y } = randomPos();
+            return {
+                id: i, 
+                sprite: chick,
+                x,
+                y
+            };
+        })
+    );
+
     useEffect(() => {
         const handleKeys = (event) => {
             if (event.key === 'ArrowUp') positon('top');
@@ -45,6 +57,8 @@ function Board ({ level }) {
         window.addEventListener('keydown', handleKeys);
         return () => window.removeEventListener('keydown', handleKeys);
     }, []);
+
+    // console.log(chicks);
 
     return (
         <div className="container">
