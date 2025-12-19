@@ -22,7 +22,7 @@ function App() {
         <>
           <p>Choose your main character: </p>
           {characters.map((c, i) => (
-          <button className="character-button" key={i} onClick={() => (setCharacter(c), isIntroShown(false))}>{c}</button>
+          <button className="character-selection-button" key={i} onClick={() => (setCharacter(c), isIntroShown(false))}>{c}</button>
           ))}
         </>
       ) : (
