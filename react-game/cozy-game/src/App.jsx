@@ -7,6 +7,15 @@ function App() {
   const [character, setCharacter] = useState("");
   const [level, setLevel] = useState(1);
   const [intro, isIntroShown] = useState(true);
+  const [dropdown, isOpenDropdown] = useState(false);
+  const instructions = [
+    "First: Select your character. Selecting a character will start the game.",
+    "Second: Move your character by moving your keyboard arrow keys.",
+    "Third: Collect your baby chicks by touching the baby chicks.",
+    "Each chick that is collected will disappear and will equal 1 point.",
+    "You move on to the next level once all baby chicks are collected.",
+    "Be careful not to get eaten by the crocodile! Three bites and the game is over!"
+  ];
 
   return (
     <>
