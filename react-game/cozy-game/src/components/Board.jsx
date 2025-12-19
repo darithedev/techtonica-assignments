@@ -7,14 +7,16 @@ function Board ({ level }) {
     const [duck, setDuck] = useState({ x: 0, y: 0 });
 
     const MOVEMENT = 20; // movement in px
+
+    // Boundaries of the game map
+    const MIN_Y = -5; // Top boundary
+    const MAX_Y = 400; // Bottom boundary
+    const MIN_X = -525; // Left boundary
+    const MAX_X = 0; // right boundary
+
     const positon = (pos) => {
         setDuck((prevPos) => {
             let { x, y } = prevPos;
-
-            const MIN_Y = -5;
-            const MAX_Y = 410;
-            const MIN_X = -525;
-            const MAX_X = 0;
 
             if (pos === 'top' && y > MIN_Y) y -= MOVEMENT;
             if (pos === 'down' && y < MAX_Y) y += MOVEMENT;
