@@ -1,28 +1,27 @@
 import { useState, useEffect } from 'react';
 import './Board.css'
 
+// Boundaries of the game map
+const MIN_Y = -5; // Top boundary
+const MAX_Y = 400; // Bottom boundary
+const MIN_X = 5; // Left boundary
+const MAX_X = 525 // right boundary
+
+const DUCK_MOVEMENT = 15; // movement in px
+
 function Board ({ level }) {
-    /* y is positive going down (y increase moving down)
-       x negative going left (x decreases to the left) */
+    // y increase moving down, x decreases moving left
     const [duck, setDuck] = useState({ x: 525, y: 0 });
     const chicksArr = ['🐤', '🐤', '🐤'];
-
-    const MOVEMENT = 15; // movement in px
-
-    // Boundaries of the game map
-    const MIN_Y = -5; // Top boundary
-    const MAX_Y = 400; // Bottom boundary
-    const MIN_X = 5; // Left boundary
-    const MAX_X = 525 // right boundary
 
     const positon = (pos) => {
         setDuck((prevPos) => {
             let { x, y } = prevPos;
 
-            if (pos === 'top' && y > MIN_Y) y -= MOVEMENT;
-            if (pos === 'down' && y < MAX_Y) y += MOVEMENT;
-            if (pos === 'left' && x > MIN_X) x -= MOVEMENT;
-            if (pos === 'right' && x < MAX_X) x += MOVEMENT;
+            if (pos === 'top' && y > MIN_Y) y -= DUCK_MOVEMENT;
+            if (pos === 'down' && y < MAX_Y) y += DUCK_MOVEMENT;
+            if (pos === 'left' && x > MIN_X) x -= DUCK_MOVEMENT;
+            if (pos === 'right' && x < MAX_X) x += DUCK_MOVEMENT;
 
             return { x, y };
         });
@@ -60,7 +59,7 @@ function Board ({ level }) {
     }, []);
 
     // console.log(chicks);
-    // console.log(duck);
+    console.log(duck);
 
     return (
         <div className="container">
