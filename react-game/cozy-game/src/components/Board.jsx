@@ -16,7 +16,7 @@ function Board ({ level }) {
     const [score, setScore] = useState(0);
     // y increase moving down, x decreases moving left
     const [duck, setDuck] = useState({ x: 525, y: 0 });
-    const chicksArr = ['🐤', '🐤', '🐤'];
+    const chicksArr = ['🐤', '🐥', '🐣'];
 
     // Function to randomly spawn x, y coordinates for chick sprite
     const randomPos = () => ({
