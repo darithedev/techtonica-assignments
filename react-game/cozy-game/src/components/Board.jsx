@@ -7,7 +7,7 @@ function Board ({ level }) {
     const [duck, setDuck] = useState({ x: 525, y: 0 });
     const chicksArr = ['🐤', '🐤', '🐤'];
 
-    const MOVEMENT = 20; // movement in px
+    const MOVEMENT = 15; // movement in px
 
     // Boundaries of the game map
     const MIN_Y = -5; // Top boundary
@@ -60,6 +60,7 @@ function Board ({ level }) {
     }, []);
 
     // console.log(chicks);
+    // console.log(duck);
 
     return (
         <div className="container">
