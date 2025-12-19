@@ -27,6 +27,24 @@ function App() {
           <p>🐤    🐥    🐣</p>
         </div>
       )}
+      {!dropdown ? (
+        <button className="how-to-button"onClick={() => (isOpenDropdown(true), isIntroShown(false))}>How to play</button>
+      ) : (
+        <div className="dropdown-instructions">
+          <h3>Here's How you Play: </h3>
+          {instructions.map(step => (
+            <p>{step}</p>
+          ))}
+          <div className="movement-keys-div">
+            <p>Movement keys:</p>
+            <p> Use <strong>[&larr;]</strong> to move left</p>
+            <p> Use <strong>[&rarr;]</strong> to move right</p>
+            <p> Use <strong>[&uarr;]</strong> to move up</p>
+            <p> Use <strong>[&darr;]</strong> to move down</p>
+          </div>
+          <button className="close-button" onClick={() => (isOpenDropdown(false), isIntroShown(true))}>x</button>
+        </div>
+      )}
       {!character ? (
         <>
           <p>Choose your main character: </p>
