@@ -16,6 +16,7 @@ const DUCK_SIZE = 64; // Font size of chick 4rem
 
 function Board ({ level, sprite }) {
     const [score, setScore] = useState(0);
+    const [nextLevel, setNextLevel] = useState(level);
     // y increase moving down, x decreases moving left
     const [duck, setDuck] = useState({ x: 525, y: 0 });
     const chicksArr = ['🐤', '🐥', '🐣'];
