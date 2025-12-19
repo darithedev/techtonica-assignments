@@ -15,6 +15,7 @@ function App() {
         <div className='intro-message'>
           <p>Oh no! Your baby chicks have scattered across multiple levels.</p>
           <p>Quick! Get your baby chicks before the crocodile gets them!</p>
+          <p>🐤    🐥    🐣</p>
         </div>
       )}
       {!character ? (
