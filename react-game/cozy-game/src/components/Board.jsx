@@ -66,6 +66,9 @@ function Board ({ level }) {
                 <div className='land'></div>
                 <p className="nest-sprite">🪹</p>
                 <p className="duck-sprite" style={{ transform: `translate(${duck.x}px, ${duck.y}px)`}}>🦆</p>
+                {chicks.map(chick => (
+                    <p key={chick.id} className="chick-sprite" style={{ right: `${chick.x}px`, top: `${chick.y}px` }}>🐤</p>
+                ))}
             </div>
             <p className="level">You are on level: {level} </p>
         </div>
