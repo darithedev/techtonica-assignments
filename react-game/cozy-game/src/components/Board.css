@@ -31,3 +31,10 @@
     left: 0;
     font-size: 4rem;
 }
+
+.chick-sprite {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    font-size: 2rem;
+}
