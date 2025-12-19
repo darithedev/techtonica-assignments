@@ -66,11 +66,11 @@ function Board ({ level }) {
             <div className="game-board">
                 <div className='land'></div>
                 <p className="nest-sprite">🪹</p>
-                <p className="duck-sprite" style={{ transform: `translate(${duck.x}px, ${duck.y}px)`}}>🦆</p>
+                <p className="duck-sprite" style={{ left: `${duck.x}px`, top: `${duck.y}px`}}>🦆</p>
                 {chicks
                     .filter(chick => chick.display)
                     .map(chick => (
-                        <p key={chick.id} className="chick-sprite" style={{ right: `${chick.x}px`, top: `${chick.y}px` }}>🐤</p>
+                        <p key={chick.id} className="chick-sprite" style={{ left: `${chick.x}px`, top: `${chick.y}px` }}>🐤</p>
                     )
                 )}
             </div>
