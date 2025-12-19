@@ -105,7 +105,7 @@ function Board ({ level }) {
                 {chicks
                     .filter(chick => chick.display)
                     .map(chick => (
-                        <p key={chick.id} className="chick-sprite" style={{ left: `${chick.x}px`, top: `${chick.y}px` }}>🐤</p>
+                        <p key={chick.id} className="chick-sprite" style={{ left: `${chick.x}px`, top: `${chick.y}px` }}>{chick.sprite}</p>
                     )
                 )}
             </div>
