@@ -21,6 +21,7 @@ function Board ({ level, sprite }) {
     const chicksArr = ['🐤', '🐥', '🐣'];
     const enemiesArr = ['🐊'];
     const [enemies, setEnemies] = useState([]);
+    const [health, setHealth] = useState("❤️❤️❤️");
 
     // Function to randomly spawn x, y coordinates for chick sprite
     const randomPos = () => ({
@@ -147,6 +148,7 @@ function Board ({ level, sprite }) {
         <div className="container">
             <div className="level-score-div">
                 <p className="level">Level: {level}</p>
+                <span>Health: {health}</span>
                 <div className="score">Score: {score}</div>
             </div>
             <div className="game-board">
