@@ -129,8 +129,19 @@ function Board ({ level, sprite }) {
         );
     }, [duck]);
 
+    // Checks is all chicks are found and sprite is back in nest, if so game moves on to level 2
+    useEffect(() => {
+        const allChicksFound = chicks.every(chick => !chick.display);
+        const duckAtNestPosition = duck.x === 525 && duck.y === 0;
+        // Moves game on to level 2 if case is met
+        if (allChicksFound && duckAtNestPosition && nextLevel === 1) level2();
+    }, [chicks, duck, nextLevel]);
+
+    /* For testing purposes */
     // console.log(chicks);
     console.log(duck);
+    console.log(enemies);
+    /* --------------------- */
 
     return (
         <div className="container">
@@ -146,6 +157,12 @@ function Board ({ level, sprite }) {
                     .filter(chick => chick.display)
                     .map(chick => (
                         <p key={chick.id} className="chick-sprite" style={{ left: `${chick.x}px`, top: `${chick.y}px` }}>{chick.sprite}</p>
+                    )
+                )}
+                {enemies
+                    .filter(enemy => enemy.display)
+                    .map(enemy => (
+                        <p key={enemy.id} className="enemy-sprite" style={{ left: `${enemy.x}px`, top: `${enemy.y}px` }}>{enemy.sprite}</p>
                     )
                 )}
             </div>

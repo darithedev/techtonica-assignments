@@ -49,3 +49,10 @@
     left: 0;
     font-size: 2rem;
 }
+
+.enemy-sprite {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    font-size: 8rem;
+}
