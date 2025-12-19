@@ -14,7 +14,9 @@ function Board ({ level }) {
     const [duck, setDuck] = useState({ x: 525, y: 0 });
     const chicksArr = ['🐤', '🐤', '🐤'];
 
+    // This function determines duck movement position
     const positon = (pos) => {
+        // Setter function for duck position
         setDuck((prevPos) => {
             let { x, y } = prevPos;
 
@@ -23,18 +25,21 @@ function Board ({ level }) {
             if (pos === 'left' && x > MIN_X) x -= DUCK_MOVEMENT;
             if (pos === 'right' && x < MAX_X) x += DUCK_MOVEMENT;
 
-            return { x, y };
+            return { x, y }; // returns duck position x, y coordniates 
         });
     };
 
+    // Function to randomly spawn x, y coordinates for chick sprite
     const randomPos = () => ({
         x: Math.floor(Math.random() * 450),
         y: Math.floor(Math.random() * 450),
     });
 
+    // Initalizes chick state with random x, y coordinates for each chick sprite
     const [chicks, setChicks] = useState(() => 
         chicksArr.map((chick, i) => {
             const { x, y } = randomPos();
+            // returns an object 
             return {
                 id: i, 
                 sprite: chick,
@@ -45,8 +50,9 @@ function Board ({ level }) {
         })
     );
 
+    // Handles key press down events from keyboard user input
     useEffect(() => {
-        const handleKeys = (event) => {
+        const handleKeyDown = (event) => {
             if (event.key === 'ArrowUp') positon('top');
             if (event.key === 'ArrowDown') positon('down');
             if (event.key === 'ArrowLeft') positon('left');
@@ -54,8 +60,8 @@ function Board ({ level }) {
             // if (event.key === 'Shift' && event.key === 'ArrowUp') {positon('top'); MOVEMENT = 35; };
         };
 
-        window.addEventListener('keydown', handleKeys);
-        return () => window.removeEventListener('keydown', handleKeys);
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
     }, []);
 
     // console.log(chicks);
