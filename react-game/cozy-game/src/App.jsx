@@ -5,6 +5,7 @@ import Board from './components/Board'
 function App() {
   const characters = ["🦆","🦩","🦢"];
   const [character, setCharacter] = useState("");
+  const [level, setLevel] = useState(1);
 
   return (
     <>
