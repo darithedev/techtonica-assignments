@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.intro-message {
+  margin: 25px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid hsl(340, 100%, 63%, 0.6);
+  background-color: hsl(340, 100%, 63%, 0.2);
+}
