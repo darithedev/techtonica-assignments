@@ -17,21 +17,6 @@ function Board ({ level }) {
     const [duck, setDuck] = useState({ x: 525, y: 0 });
     const chicksArr = ['🐤', '🐤', '🐤'];
 
-    // This function determines duck movement position
-    const positon = (pos) => {
-        // Setter function for duck position
-        setDuck((prevPos) => {
-            let { x, y } = prevPos;
-
-            if (pos === 'top' && y > MIN_Y) y -= DUCK_MOVEMENT;
-            if (pos === 'down' && y < MAX_Y) y += DUCK_MOVEMENT;
-            if (pos === 'left' && x > MIN_X) x -= DUCK_MOVEMENT;
-            if (pos === 'right' && x < MAX_X) x += DUCK_MOVEMENT;
-
-            return { x, y }; // returns duck position x, y coordniates 
-        });
-    };
-
     // Function to randomly spawn x, y coordinates for chick sprite
     const randomPos = () => ({
         x: Math.floor(Math.random() * 450),
@@ -52,6 +37,21 @@ function Board ({ level }) {
             };
         })
     );
+
+    // This function determines duck movement position and adds boundaries
+    const positon = (pos) => {
+        // Setter function for duck position
+        setDuck((prevPos) => {
+            let { x, y } = prevPos;
+
+            if (pos === 'top' && y > MIN_Y) y -= DUCK_MOVEMENT;
+            if (pos === 'down' && y < MAX_Y) y += DUCK_MOVEMENT;
+            if (pos === 'left' && x > MIN_X) x -= DUCK_MOVEMENT;
+            if (pos === 'right' && x < MAX_X) x += DUCK_MOVEMENT;
+
+            return { x, y }; // returns duck position x, y coordniates 
+        });
+    };
 
     // Handles key press down events from keyboard user input
     useEffect(() => {
