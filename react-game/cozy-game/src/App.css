@@ -40,3 +40,79 @@
 .read-the-docs {
   color: #888;
 }
+
+.intro-message {
+  margin: 25px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid hsl(340, 100%, 63%, 0.6);
+  background-color: hsl(340, 100%, 63%, 0.2);
+}
+
+.how-to-button {
+  height: 25px;
+  width: 125px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(340, 100%, 63%, 0.2);
+}
+
+.how-to-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.dropdown-instructions {
+  padding: 20px;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  background-color: hsl(340, 100%, 63%, 0.2);
+  border: 2px solid hsl(340, 100%, 63%, 0.6);
+}
+
+.movement-keys-div {
+  margin-top: 40px; 
+}
+
+.close-button {
+  height: 25px;
+  width: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: beige;
+}
+
+.close-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+button.character-selection-button {
+  width: 150px;
+  height: 150px;
+  font-size: 5rem;
+  border: 2px solid #00bcd4;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: #e6fcff;
+}
+
+.character-selection-button:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.end-game-button {
+  height: 25px;
+  width: 125px;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(340, 100%, 63%, 0.2);
+}
+
+.end-game-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}

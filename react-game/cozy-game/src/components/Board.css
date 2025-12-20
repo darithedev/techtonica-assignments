@@ -1,0 +1,58 @@
+.game-board {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.level-score-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5rem;
+}
+
+.land {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    background-color: sandybrown;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 75px
+}
+
+.nest-sprite {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    font-size: 6rem;
+}
+
+.duck-sprite {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    font-size: 4rem;
+}
+
+.chick-sprite {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    font-size: 2rem;
+}
+
+.enemy-sprite {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    font-size: 8rem;
+}
