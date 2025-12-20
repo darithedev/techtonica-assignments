@@ -21,7 +21,7 @@ This repository contains a multi-level game (2 levels at this time). Players sel
 
 ** Each chick that is collected will disappear and will equal 1 point. **
 
-You move on to the next level once all baby chicks are collected.
+You move on to the next level once all baby chicks are collected and when you are located back on the nest.
 
 Be careful not to get eaten by the crocodile! Three bites and the game is over!
 
