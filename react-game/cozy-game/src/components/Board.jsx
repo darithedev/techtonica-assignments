@@ -148,7 +148,7 @@ function Board ({ level, sprite }) {
     return (
         <div className="container">
             <div className="level-score-div">
-                <p className="level">Level: {level}</p>
+                <p className="level">Level: {nextLevel}</p>
                 <span>Health: {health}</span>
                 <div className="score">Score: {score}</div>
             </div>
