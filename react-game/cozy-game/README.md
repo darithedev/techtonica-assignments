@@ -2,7 +2,8 @@
 
 This repository contains a multi-level game (2 levels at this time). Players select a character and collect the randomly spawned chicks to earn points. This game includes two levels. Level 2 introduces a crocodile enemy intended to reduce the player's health upon collision (collision logic for the enemy sprites are not fully implemented yet.)
 
-**Play it now:** capturethechicks.vercel.app
+**Play it now:** [Capture The Chicks React Game](https://capturethechicks.vercel.app/)
+))
 
 <img width="425" height="350" alt="Screenshot 2025-12-19 at 18 52 35" src="https://github.com/user-attachments/assets/1f6fdb82-aab7-4c98-a7d6-ff0055890698" />
 
