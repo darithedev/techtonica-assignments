@@ -121,6 +121,7 @@ button.character-selection-button {
   position: fixed;
   bottom: 0;
   border-top: 1px solid lightblue;
+  background-color: beige;
 }
 
 .footer a {
