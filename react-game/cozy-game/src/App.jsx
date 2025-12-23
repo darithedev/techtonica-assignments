@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Board from './components/Board'
+import { FaGithub } from "react-icons/fa";
 
 function App() {
   const characters = ["🦆","🦩","🦢"];
