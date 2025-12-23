@@ -69,6 +69,12 @@ function App() {
           <button className='end-game-button' onClick={() => seAcabo()}>End Game</button>
         </>
       )}
+      <footer className="footer">
+        <p>
+          Hi I'm <a href="https://github.com/darithedev">Dari</a> 👋🏽, 
+          and I built this game! Check out the codebase for this game on <a id="github-green" href="https://github.com/darithedev/techtonica-assignments/tree/main/react-game/cozy-game"><FaGithub /></a></p>.
+          
+      </footer>
     </>
   )
 }
