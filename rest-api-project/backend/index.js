@@ -3,6 +3,13 @@ import BOOKS from './books.js';
 
 // Create the express application object
 const app = express();
+// Set port
+const PORT = 3000;
 
 // Middleware: Allow the server to read JSON data
 app.use(express.json());
+
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
