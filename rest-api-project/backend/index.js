@@ -13,6 +13,9 @@ app.get('/books', (req, res) => {
     res.json(BOOKS);
 });
 
+app.get('/books:isbn', (req, res) => {
+    
+})
 // Start server
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
