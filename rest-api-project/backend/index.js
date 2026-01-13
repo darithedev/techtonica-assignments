@@ -14,8 +14,13 @@ app.get('/books', (req, res) => {
 });
 
 app.get('/books:isbn', (req, res) => {
-    
-})
+
+});
+
+app.delete('/books:isbn', (req, res) => {
+
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
