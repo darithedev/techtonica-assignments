@@ -13,7 +13,7 @@ app.get('/books', (req, res) => {
     res.json(BOOKS);
 });
 
-app.post('/book/:isbn', (req, res) => {
+app.post('/books', (req, res) => {
 
 });
 
@@ -23,8 +23,6 @@ app.get('/books/:isbn', (req, res) => {
 app.delete('/books/:isbn', (req, res) => {
 
 });
-
-
 
 // Start server
 app.listen(PORT, () => {
