@@ -20,6 +20,10 @@ app.post('/books', (req, res) => {
 app.get('/books/:isbn', (req, res) => {
 });
 
+app.put('/books/:isbn', (req, res) => {
+
+})
+
 app.delete('/books/:isbn', (req, res) => {
 
 });
