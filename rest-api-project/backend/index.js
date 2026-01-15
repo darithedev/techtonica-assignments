@@ -14,6 +14,7 @@ app.get('/books', (req, res) => {
     res.json(BOOKS);
 });
 
+// Endpoint to add new book to books.js temporarily
 app.post('/books', async (req, res) => {
     const book = req.body;
     BOOKS.push(book);
