@@ -20,7 +20,14 @@ app.post('/books', async (req, res) => {
     res.status(201).json(book);
 });
 
-app.get('/books/:isbn', (req, res) => {
+// Endpoint that gets a specific book by isbn
+app.get('/books/:isbn', async (req, res) => {
+    const { isbn } = req.params;
+    const books = BOOKS.filter(book => book.isbn === isbn);
+
+    if (books.length === 0) return res.status(404).json({ error: 'This book does not exist!'});
+
+    res.json(books);
 });
 
 app.put('/books/:isbn', (req, res) => {
