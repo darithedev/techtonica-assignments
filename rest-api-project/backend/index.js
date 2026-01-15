@@ -14,7 +14,7 @@ app.get('/books', (req, res) => {
     res.json(BOOKS);
 });
 
-app.post('/books', (req, res) => {
+app.post('/books/:isbn', (req, res) => {
 
 });
 
