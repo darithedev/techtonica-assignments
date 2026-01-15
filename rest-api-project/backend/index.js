@@ -9,6 +9,7 @@ const PORT = 3000;
 // Middleware: Allow the server to read JSON data
 app.use(express.json());
 
+// Endpoint that gets all books in books.js
 app.get('/books', (req, res) => {
     res.json(BOOKS);
 });
