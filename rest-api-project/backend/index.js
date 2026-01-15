@@ -14,8 +14,10 @@ app.get('/books', (req, res) => {
     res.json(BOOKS);
 });
 
-app.post('/books/:isbn', (req, res) => {
-
+app.post('/books', async (req, res) => {
+    const book = req.body;
+    BOOKS.push(book);
+    res.status(201).json(book);
 });
 
 app.get('/books/:isbn', (req, res) => {
