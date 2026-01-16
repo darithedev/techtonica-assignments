@@ -33,3 +33,32 @@ This project implements complete CRUD (Create, Read, Update, Delete) operations 
 | POST | `/books` | Create new book | `{ isbn, title, author, format }` |
 | PUT | `/books/:isbn` | Update book | `{ isbn, title, author, format }` |
 | DELETE | `/books/:isbn` | Delete book | `{ "message": "Book Name was deleted!" }` |
+
+## Testing
+
+### Using Postman
+
+1. **Get Healthy Message**
+   - Method: `GET`
+   - URL: `http://localhost:8080/`
+
+2. **Get All Books**
+   - Method: `GET`
+   - URL: `http://localhost:8080/books`
+
+3. **Create New Book**
+   - Method: `POST`
+   - URL: `http://localhost:8080/books`
+
+4. **Get Single Book**
+   - Method: `GET`
+   - URL: `http://localhost:8080/books/0553120441`
+
+5. **Update Book**
+   - Method: `PUT`
+   - URL: `http://localhost:8080/books/0553120441`
+
+6. **Delete Book**
+   - Method: `DELETE`
+   - URL: `http://localhost:8080/books/0553120441`
+
