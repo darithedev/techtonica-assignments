@@ -5,7 +5,7 @@ import pool from './db/pool.js';
 // Create the express application object
 const app = express();
 // Set port
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 // Middleware: Allow the server to read JSON data
 app.use(express.json());
