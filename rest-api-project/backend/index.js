@@ -1,5 +1,6 @@
 import express from 'express';
 import BOOKS from './books.js';
+import pool from './db/pool.js';
 
 // Create the express application object
 const app = express();
