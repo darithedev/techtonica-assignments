@@ -57,16 +57,21 @@ app.get('/books/:isbn', async (req, res) => {
 
 // Endpoint to update book by isbn
 app.put('/books/:isbn', async (req, res) => {
-    const { isbn } = req.params;
-    const updated = req.body;
+    try {
+        const { isbn } = req.params;
+        const { title, author, format } = req.body;
+        
+        const result = await pool.query(
+            'UPDATE books SET title=$1, author=$2, format=$3 WHERE isbn=$4',
+            [title, author, format, isbn]
+        );
 
-    const books = BOOKS.filter(book => book.isbn === isbn);
+        if (result.rows.length === 0) return res.status(404).json({ error: 'This book does not exist!'});
 
-    if (books.length === 0) return res.status(404).json({ error: 'This book does not exist!'});
-
-    Object.assign(books[0], updated);
-
-    res.json(books);
+        res.status(201).json(result.rows[0])
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 // Endpoint to delete book from books.js temporarily
