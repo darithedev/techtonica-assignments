@@ -1,4 +1,34 @@
 const BOOKS = [{
+    isbn: "9780439023481",
+    title: "The Hunger Games",
+    author: "Suzanne Collins",
+    format: "Paperback"
+  },
+  {
+    isbn: "9780439023498",
+    title: "Catching Fire",
+    author: "Suzanne Collins",
+    format: "Paperback"
+  },
+  {
+    isbn: "9780439023511",
+    title: "Mockingjay",
+    author: "Suzanne Collins",
+    format: "Paperback"
+  },
+  {
+    isbn: "9780307887443",
+    title: "Ready Player One",
+    author: "Ernest Cline",
+    format: "Hardcover"
+  },
+  {
+    isbn: "9781524761332",
+    title: "Ready Player Two",
+    author: "Ernest Cline",
+    format: "Hardcover"
+  },
+  {
     "isbn": "0553120441",
     "title": "Harry Potter and the Sorcerer's Stone",
     "author": "J.K. Rowling",
