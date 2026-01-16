@@ -45,8 +45,16 @@ app.put('/books/:isbn', async (req, res) => {
     res.json(books);
 });
 
-app.delete('/books/:isbn', (req, res) => {
-    
+// Endpoint to delete book from books.js temporarily
+app.delete('/books/:isbn', async (req, res) => {
+    const { isbn } = req.params;
+    const bookAtIndex = BOOKS.findIndex(book => book.isbn === isbn);
+
+    if (bookAtIndex === -1) return res.status(404).json({ error: 'This book does not exist!'});
+
+    const deleted = BOOKS.splice(bookAtIndex, 1)[0];
+
+    res.json(deleted);
 });
 
 // Start server
