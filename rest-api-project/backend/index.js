@@ -20,11 +20,21 @@ app.get('/books', async (req, res) => {
     }
 });
 
-// Endpoint to add new book to books.js temporarily
+// Endpoint to create new book and add to local PostgreSQL Books db
 app.post('/books', async (req, res) => {
-    const book = req.body;
-    BOOKS.push(book);
-    res.status(201).json(book);
+    try {
+        const { isbn, title, author, format } = req.body;
+
+        const result = await pool.query(
+            `INSERT INTO books (isbn, title, author, format) 
+             VALUES ($1, $2, $3, $4) 
+             RETURNING *`,
+            [isbn, title, author, format]
+        );
+        res.status(201).json(result.rows[0]);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 // Endpoint that gets a specific book by isbn
