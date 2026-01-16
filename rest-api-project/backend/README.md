@@ -25,10 +25,6 @@ This project implements complete CRUD (Create, Read, Update, Delete) operations 
 
 ## API Endpoints
 
-Or in table format:
-
-## API Endpoints
-
 | Method | Endpoint | Description | Request Body |
 |--------|----------|-------------|--------------|
 | GET | `/` | Get healthy message | `{"message":"Express server is healthy."}` |
