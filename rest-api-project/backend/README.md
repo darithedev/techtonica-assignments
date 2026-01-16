@@ -22,3 +22,18 @@ This project implements complete CRUD (Create, Read, Update, Delete) operations 
 5. Connect to database ```\c database-name```
 6. Create books table ```CREATE TABLE books( isbn VARCHAR(50) PRIMARY KEY, title TEXT NOT NULL, author TEXT NOT NULL, format VARCHAR(25));```
 7. To see the data structure of the books table use this query ```\d books```
+
+## API Endpoints
+
+Or in table format:
+
+## API Endpoints
+
+| Method | Endpoint | Description | Request Body |
+|--------|----------|-------------|--------------|
+| GET | `/` | Get healthy message | `{"message":"Express server is healthy."}` |
+| GET | `/books` | Get all books | ``{ isbn, title, author, format }`` |
+| GET | `/books/:isbn` | Get book by ISBN | `{ isbn, title, author, format }` |
+| POST | `/books` | Create new book | `{ isbn, title, author, format }` |
+| PUT | `/books/:isbn` | Update book | `{ isbn, title, author, format }` |
+| DELETE | `/books/:isbn` | Delete book | `{ "message": "Book Name was deleted!" }` |
