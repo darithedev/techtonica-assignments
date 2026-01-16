@@ -62,3 +62,22 @@ This project implements complete CRUD (Create, Read, Update, Delete) operations 
    - Method: `DELETE`
    - URL: `http://localhost:8080/books/0553120441`
 
+### Using cURL
+
+1. **Get Healthy Message**
+   - `curl http://localhost:8080/`
+
+2. **Get All Books**
+   - `curl http://localhost:8080/books`
+
+3. **Create New Book**
+   - `curl -X POST http://localhost:8080/books \ -H "Content-Type: application/json" \ -d '{ "isbn": "05531324567" "title": "A Court of Wings and Ruin", "author": "Sarah J. Maas" "format": "Hardcover" }'`
+
+4. **Get Single Book**
+   - `curl http://localhost:8080/books/05531324567`
+
+5. **Update Book**
+   - `curl -X PUT http://localhost:8080/books/05531324567 \ -H "Content-Type: application/json" \ -d '{ "isbn": "05531324567" "title": "A Court of Wings and Ruin First Edition", "author": "Sarah J. Maas" "format": "Hardcover" }'`
+
+6. **Delete Book**
+   - `curl -X DELETE http://localhost:8080/books/1234567890`
