@@ -74,16 +74,22 @@ app.put('/books/:isbn', async (req, res) => {
     }
 });
 
-// Endpoint to delete book from books.js temporarily
+// Endpoint to delete book
 app.delete('/books/:isbn', async (req, res) => {
-    const { isbn } = req.params;
-    const bookAtIndex = BOOKS.findIndex(book => book.isbn === isbn);
+    try {
+        const { isbn } = req.params;
 
-    if (bookAtIndex === -1) return res.status(404).json({ error: 'This book does not exist!'});
+        const result = await pool.query(
+            'DELETE FROM books WHERE isbn=$1 RETURNING *', 
+            [isbn]
+        );
 
-    const deleted = BOOKS.splice(bookAtIndex, 1)[0];
+        if (result.rows.length === 0) return res.status(404).json({ error: 'This book does not exist!'});
 
-    res.json(deleted);
+        res.status(200).json({ message: `The book "${result.rows[0].title}" was deleted!` })
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 // Start server
