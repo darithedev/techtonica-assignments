@@ -31,12 +31,22 @@ app.get('/books/:isbn', async (req, res) => {
     res.json(books);
 });
 
-app.put('/books/:isbn', (req, res) => {
+// Endpoint to update book by isbn
+app.put('/books/:isbn', async (req, res) => {
+    const { isbn } = req.params;
+    const updated = req.body;
 
+    const books = BOOKS.filter(book => book.isbn === isbn);
+
+    if (books.length === 0) return res.status(404).json({ error: 'This book does not exist!'});
+
+    Object.assign(books[0], updated);
+
+    res.json(books);
 });
 
 app.delete('/books/:isbn', (req, res) => {
-
+    
 });
 
 // Start server
