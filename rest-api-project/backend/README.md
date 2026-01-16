@@ -12,3 +12,13 @@ This project implements complete CRUD (Create, Read, Update, Delete) operations 
 6. Run command ```node index.js``` to run your server
 7. On your browser, go to ```localhost:port/``` ** Make sure to change ```port``` with local port configuration
 8. Congratulations your server is now running
+
+## Database (PostgreSQL)
+**NOTE** This uses a local PostgreSQL database that can be set up locally using your command line / terminal.
+1. Install PostgreSQL 15 ```brew install postgres@15```
+2. Start postgres in the background ```brew services start postgresql@15```
+3. Enter postgres ```psql postgres```
+4. Create database ```CREATE DATABASE database-name```
+5. Connect to database ```\c database-name```
+6. Create books table ```CREATE TABLE books( isbn VARCHAR(50) PRIMARY KEY, title TEXT NOT NULL, author TEXT NOT NULL, format VARCHAR(25));```
+7. To see the data structure of the books table use this query ```\d books```
