@@ -36,7 +36,7 @@ This project implements complete CRUD (Create, Read, Update, Delete) operations 
 
 ## Testing
 
-### Using Postman
+### Using [Postman](https://learning.postman.com/docs/getting-started/overview/)
 
 1. **Get Healthy Message**
    - Method: `GET`
