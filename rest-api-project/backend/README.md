@@ -11,3 +11,4 @@ This project implements complete CRUD (Create, Read, Update, Delete) operations 
 5. Edit ```PORT``` and ```DATABASE_URL``` with your local configuration
 6. Run command ```node index.js``` to run your server
 7. On your browser, go to ```localhost:port/``` ** Make sure to change ```port``` with local port configuration
+8. Congratulations your server is now running
