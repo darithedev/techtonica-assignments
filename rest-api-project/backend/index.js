@@ -10,9 +10,14 @@ const PORT = 3000;
 // Middleware: Allow the server to read JSON data
 app.use(express.json());
 
-// Endpoint that gets all books in books.js
-app.get('/books', (req, res) => {
-    res.json(BOOKS);
+// Endpoint that gets all books in local PostgreSQL Books db
+app.get('/books', async (req, res) => {
+    try {
+        const result = await pool.query('SELECT * FROM books');
+        res.status(200).json(result.rows);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 // Endpoint to add new book to books.js temporarily
