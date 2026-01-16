@@ -37,14 +37,22 @@ app.post('/books', async (req, res) => {
     }
 });
 
-// Endpoint that gets a specific book by isbn
+// Endpoint that returns a single requested book by isbn
 app.get('/books/:isbn', async (req, res) => {
-    const { isbn } = req.params;
-    const books = BOOKS.filter(book => book.isbn === isbn);
+    try {
+        const { isbn } = req.params;
 
-    if (books.length === 0) return res.status(404).json({ error: 'This book does not exist!'});
+        const result = await pool.query(
+            `SELECT * FROM books where isbn = $1`,
+            [isbn]
+        );
 
-    res.json(books);
+        if (result.rows.length === 0) return res.status(404).json({ error: 'This book does not exist!'});
+
+        res.status(200).json(result.rows[0]);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 // Endpoint to update book by isbn
