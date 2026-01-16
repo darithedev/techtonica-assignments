@@ -9,3 +9,5 @@ This project implements complete CRUD (Create, Read, Update, Delete) operations 
 3. Run command ```npm install```
 4. Edit ```example.env``` file name to ```.env```
 5. Edit ```PORT``` and ```DATABASE_URL``` with your local configuration
+6. Run command ```node index.js``` to run your server
+7. On your browser, go to ```localhost:port/``` ** Make sure to change ```port``` with local port configuration
