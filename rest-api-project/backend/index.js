@@ -10,6 +10,15 @@ const PORT = process.env.PORT;
 // Middleware: Allow the server to read JSON data
 app.use(express.json());
 
+// Endpoint to show server is healthy and running
+app.get('/', async (req, res) => {
+    try {
+        res.status(200).json({ message: 'Express server is healthy.' });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 // Endpoint that gets all books in local PostgreSQL Books db
 app.get('/books', async (req, res) => {
     try {
