@@ -6,6 +6,12 @@ const router = express.Router();
 router.get('/', async(req, res) => {
     try {
         const result = await pool.query(`SELECT * FROM players`);
+
+        if (result.rows.length === 0) {
+            return res.status(400).json({
+                error: "No players in database."
+            });
+        }
         res.status(200).json(result.rows);
     } catch (error) {
         console.error('Error with getting all players', error);
