@@ -102,6 +102,11 @@ router.delete('/:id', async(req, res) => {
             [id]
         );
 
+        await pool.query(
+            `DELETE FROM games WHERE player_id = $1`,
+            [id]
+        );
+
         if (result.rows.length === 0) {
             return res.status(404).json({ 
                 error: "This Player could not be deleted because they do not exist!"
