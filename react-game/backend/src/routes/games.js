@@ -41,6 +41,12 @@ router.post('/', async(req, res) => {
             RETURNING *`,
             [player_id, player_score]
         );
+
+        await pool.query (
+            `UPDATE players
+            SET score = $1 WHERE id = $2`,
+            [player_score, player_id]
+        )
         res.status(201).json(result.rows[0]);
     } catch (error) {
         console.error('Error with adding the score for this player.', error);
