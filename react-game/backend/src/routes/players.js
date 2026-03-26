@@ -43,7 +43,31 @@ router.post('/', async(req, res) => {
 });
 
 router.get('/:id', async(req, res) => {
+    try {
+        const { id } = req.params;
 
+        if (id === null) {
+            return res.status(400).json({
+                error: 'Could not find user.'
+            });
+        }
+
+        const result = await pool.query(`
+            SELECT * FROM players WHERE id = $1`,
+            [id]
+        );
+
+        if (result.rows.length === 0) {
+            return res.status(400).json({
+                error: 'Error! User does not exist.'
+            });
+        }
+
+        res.status(200).json(result.rows[0]);
+    } catch (error) {
+        console.error('Error with getting individual player.', error);
+        res.status(500).json({ error: 'Error! Could not get individual player.' });
+    }
 });
 
 router.put('/:id', async(req, res) => {
