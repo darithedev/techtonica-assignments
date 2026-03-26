@@ -48,6 +48,23 @@ router.post('/', async(req, res) => {
     }
 });
 
+router.get('/leaderboard', async (req, res) => {
+    try {
+        const result = await pool.query(
+            `SELECT * FROM players ORDER BY score DESC LIMIT 10`
+        );
+        if (result.rows.length === 0) {
+            return res.status(400).json({
+                error: 'No players in database.',
+            });
+        }
+        res.status(200).json(result.rows);
+    } catch (error) {
+        console.error('Error with getting leaderboard', error);
+        res.status(500).json({ error: 'Error! Could not get leaderboard.' });
+    }
+});
+
 router.get('/:id', async(req, res) => {
     try {
         const { id } = req.params;
