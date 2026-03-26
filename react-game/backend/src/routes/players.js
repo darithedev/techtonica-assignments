@@ -70,12 +70,29 @@ router.get('/:id', async(req, res) => {
     }
 });
 
-router.put('/:id', async(req, res) => {
-
-});
-
 router.delete('/:id', async(req, res) => {
+    try {
+        const { id } = req.params;
 
+        const result = await pool.query(
+            `DELETE FROM players WHERE id = $1 RETURNING *`,
+            [id]
+        );
+
+        if (result.rows.length === 0) {
+            return res.status(404).json({ 
+                error: "This Player could not be deleted because they do not exist!"
+            });
+        };
+
+        res.status(200).json({ 
+            message: `The player has been deleted.`
+        });
+
+    } catch (error) {
+        console.error('Could not locate or delete this player.', error.message);
+        res.status(500).json({ error: "Error! With locating or deleting this player!"});
+    }
 });
 
 export default router;
