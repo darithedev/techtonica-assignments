@@ -31,9 +31,24 @@ function App() {
     setScreen('character-selection');
   };
 
+  const postScore = (newScore) => {
+    return fetch("http://localhost:3000/api/games", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          player_id: player.id,
+          player_score: newScore,
+        })
+    })
+    .then((response) => {
+        return response.json();
+    });
+  };
+
   // 'Se Acabo' is spanish for its done or its over
-  const seAcabo = () => {
+  const seAcabo = async () => {
     setGameOver(true);
+    await postScore(score);
     window.location.reload();
   };
 
