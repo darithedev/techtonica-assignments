@@ -91,10 +91,12 @@ There is no automated test suite in this repo yet (`backend` `npm test` is a pla
 
 
 ## How to play
-
-1. Select your character. Selecting a character will start the game.
-2. Move your character by moving your keyboard arrow keys.
-3. Collect your baby chicks by touching the baby chicks.
+1. Select or create a new player
+2. Select your character. Selecting a character will start the game.
+3. Move your character by moving your keyboard arrow keys.
+4. Collect your baby chicks by touching the baby chicks. (only two levels currently)
+5. To end game, click the end game button, where your score will be submitted 
+6. Click letterboard button to see your ranking
 
 ** Each chick that is collected will disappear and will equal 1 point. **
 
@@ -108,3 +110,27 @@ Be careful not to get eaten by the crocodile! Three bites and the game is over!
 * Use [→] to move right
 * Use [↑] to move up
 * Use [↓] to move down
+
+### Leaderboard and ranking (top 10)
+
+Use the **Leaderboard** button in the UI to open the ranking view. It shows the **top 10** players ordered by highest `score` first (same data the API returns).
+
+**Example (API — local backend):**
+
+```bash
+curl -s http://127.0.0.1:3000/api/players/leaderboard
+```
+
+**Example response shape** (array of player rows, up to 10):
+
+```json
+[
+  {
+    "id": 1,
+    "player_name": "Alex",
+    "email": "alex@example.com",
+    "player_username": "alexr",
+    "score": 24
+  }
+]
+```
