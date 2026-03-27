@@ -21,7 +21,8 @@ function App() {
   ];
   const [gameOver, setGameOver] = useState(false);
   const [screen, setScreen] = useState('existing-player-screen');
-
+  const [player, setPlayer] = useState(null);
+  
   // 'Se Acabo' is spanish for its done or its over
   const seAcabo = () => {
     setGameOver(true);
@@ -64,7 +65,7 @@ function App() {
           isLeaderboardShown={isLeaderboardShown}
         />
       )}
-      {screen === 'character-selection' && (
+      {screen === 'character-selection' && player && (
         <>
           {!character ? (
             <>
