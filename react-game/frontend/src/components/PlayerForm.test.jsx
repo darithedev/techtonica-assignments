@@ -31,4 +31,10 @@ describe('Player Form Component', () => {
         const username = screen.getByLabelText(/create your gamer username/i);
         expect(username).toBeInTheDocument();
     });
+
+    test('submit button exists', () => {
+        render(<PlayerForm />);
+        const submitButton = screen.getByRole('button', { name: /submit/i });
+        expect(submitButton).toBeInTheDocument();
+    });
 });
