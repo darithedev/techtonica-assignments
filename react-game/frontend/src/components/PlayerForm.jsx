@@ -29,6 +29,7 @@ const PlayerForm = ({ setScreen, playerSet }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         postPlayer(player);
+        playerSet(player);
     };
 
     return (
