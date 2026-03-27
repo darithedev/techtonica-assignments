@@ -77,6 +77,12 @@ function App() {
           playerSet={characterSelection}
         />
       )}
+      {screen === 'create-player-screen' && (
+        <PlayerForm
+          setScreen={setScreen}
+          playerSet={characterSelection}
+        />
+      )}
       {screen === 'character-selection' && player && (
         <>
           {!character ? (
