@@ -14,7 +14,7 @@ const CHICK_SIZE = 32; // Font size of chick 2rem
 const DUCK_SIZE = 64; // Font size of chick 4rem
 // const ENEMY_SIZE = 128; // Font size of croc 8rem
 
-function Board ({ level, sprite }) {
+function Board ({ level, sprite, endScore }) {
     const [score, setScore] = useState(0);
     const [nextLevel, setNextLevel] = useState(level);
     // y increase moving down, x decreases moving left
@@ -119,6 +119,7 @@ function Board ({ level, sprite }) {
                 // Only if chick is displayed and duck and chick overlap (coordinates)
                 if (chick.display && collision(duck, chick)) {
                     setScore(score + 1);
+                    endScore(score + 1)
                     // Returns new object for chick that duck collides with
                     return {
                         ...chick,
