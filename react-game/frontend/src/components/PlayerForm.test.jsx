@@ -13,4 +13,10 @@ describe('Player Form Component', () => {
         render(<PlayerForm />)
         expect(screen.getByText('Create a new Player')).toBeInTheDocument();
     });
+
+    test('name input field exists', () => {
+        render(<PlayerForm />)
+        const nameInput = screen.getByLabelText(/your name/i);
+        expect(nameInput).toBeInTheDocument();
+    });
 });
