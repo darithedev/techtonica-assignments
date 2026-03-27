@@ -12,6 +12,10 @@ const Leaderboard = ({ isLeaderboardShown }) => {
         });
     };
 
+    useEffect(() => {
+        getLeaderboard();
+    }, []);
+
     return (
         <div className="leaderboard-container">
             
