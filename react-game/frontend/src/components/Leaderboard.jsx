@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './Leaderboard.css'
 
 const Leaderboard = ({ isLeaderboardShown }) => {
 
