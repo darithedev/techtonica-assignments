@@ -37,4 +37,19 @@ describe('Player Form Component', () => {
         const submitButton = screen.getByRole('button', { name: /submit/i });
         expect(submitButton).toBeInTheDocument();
     });
+
+    test('user can add input to player form for required fields', async () => {
+        render(<PlayerForm />);
+        const nameInput = screen.getByLabelText(/your name/i);
+        const email = screen.getByLabelText(/your email/i);
+        const username = screen.getByLabelText(/create your gamer username/i);
+
+        await userEvent.type(nameInput, 'Namey Name');
+        await userEvent.type(email, 'namey@mail.com');
+        await userEvent.type(username, 'nameyname123');
+
+        expect(nameInput).toHaveValue('Namey Name');
+        expect(email).toHaveValue('namey@mail.com');
+        expect(username).toHaveValue('nameyname123');
+    });
 });
