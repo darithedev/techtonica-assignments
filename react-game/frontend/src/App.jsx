@@ -65,6 +65,12 @@ function App() {
           isLeaderboardShown={isLeaderboardShown}
         />
       )}
+      {screen === 'existing-player-screen' && (
+        <PlayerList 
+          setScreen={setScreen}
+          playerSet={characterSelection}
+        />
+      )}
       {screen === 'character-selection' && player && (
         <>
           {!character ? (
