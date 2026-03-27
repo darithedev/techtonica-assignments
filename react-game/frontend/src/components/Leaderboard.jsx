@@ -18,7 +18,13 @@ const Leaderboard = ({ isLeaderboardShown }) => {
 
     return (
         <div className="leaderboard-container">
-            
+            <h2>Top 10 Players</h2>
+            {leaderboardList.map((player, i) => (
+                <li id="player" key={player.id}>
+                    {i+1}. {player.player_username} | {player.score}
+                </li>
+            ))}
+            <button className="close-button" onClick={() => (window.location.reload(), isLeaderboardShown(false))}>x</button>
         </div>
     )
 }
