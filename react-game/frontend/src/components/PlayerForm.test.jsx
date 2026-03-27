@@ -19,4 +19,16 @@ describe('Player Form Component', () => {
         const nameInput = screen.getByLabelText(/your name/i);
         expect(nameInput).toBeInTheDocument();
     });
+
+    test('email input field exists', () => {
+        render(<PlayerForm />)
+        const emailInput = screen.getByLabelText(/your email/i);
+        expect(emailInput).toBeInTheDocument();
+    });
+
+    test('username input field exists', () => {
+        render(<PlayerForm />)
+        const username = screen.getByLabelText(/create your gamer username/i);
+        expect(username).toBeInTheDocument();
+    });
 });
