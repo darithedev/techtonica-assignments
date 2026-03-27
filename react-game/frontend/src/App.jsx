@@ -22,6 +22,8 @@ function App() {
   const [gameOver, setGameOver] = useState(false);
   const [screen, setScreen] = useState('existing-player-screen');
   const [player, setPlayer] = useState(null);
+  const [leaderboard, isLeaderboardShown] = useState(false);
+  const [score, setScore] = useState(0);
 
   const characterSelection = (selectedPlayer) => {
     if (!selectedPlayer) return;
