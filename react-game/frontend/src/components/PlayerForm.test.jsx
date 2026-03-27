@@ -9,5 +9,8 @@ afterEach(() => {
 });
 
 describe('Player Form Component', () => {
-    
+    test('Player form renders', () => {
+        render(<PlayerForm />)
+        expect(screen.getByText('Create a new Player')).toBeInTheDocument();
+    });
 });
