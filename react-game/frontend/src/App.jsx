@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import Board from './components/Board'
 import Leaderboard from './components/Leaderboard.jsx'
+import PlayerForm from './components/PlayerForm.jsx'
+import PlayerList from './components/PlayersList.jsx'
 
 function App() {
   const characters = ["🦆","🦩","🦢"];
