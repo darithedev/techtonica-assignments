@@ -114,7 +114,8 @@ function App() {
             <>
               <Board 
                 level={level} 
-                sprite={character} 
+                sprite={character}
+                endScore={setScore}
               />
               <button className='end-game-button' onClick={() => seAcabo()}>End Game</button>
             </>
