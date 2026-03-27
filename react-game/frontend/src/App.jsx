@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Board from './components/Board'
+import Leaderboard from './components/Leaderboard.jsx'
 
 function App() {
   const characters = ["🦆","🦩","🦢"];
@@ -17,6 +18,7 @@ function App() {
     "Be careful not to get eaten by the crocodile! Three bites and the game is over!"
   ];
   const [gameOver, setGameOver] = useState(false);
+  const [screen, setScreen] = useState('existing-player-screen');
 
   // 'Se Acabo' is spanish for its done or its over
   const seAcabo = () => {
@@ -35,7 +37,10 @@ function App() {
         </div>
       )}
       {!dropdown ? (
-        <button className="how-to-button"onClick={() => (isOpenDropdown(true), isIntroShown(false))}>How to play</button>
+        <>
+          <button className="how-to-button"onClick={() => (isOpenDropdown(true), isIntroShown(false))}>How to play</button>
+          <button className="how-to-button"onClick={() => (setScreen('leaderboard'), isLeaderboardShown(true))}>Leaderboard</button>
+        </>
       ) : (
         <div className="dropdown-instructions">
           <h3>Here's How you Play: </h3>
@@ -52,20 +57,30 @@ function App() {
           <button className="close-button" onClick={() => (isOpenDropdown(false), isIntroShown(true))}>x</button>
         </div>
       )}
-      {!character ? (
+      {screen === 'leaderboard' && (
+        <Leaderboard 
+          isLeaderboardShown={isLeaderboardShown}
+        />
+      )}
+      {screen === 'character-selection' && (
         <>
-          <p>Choose your main character: </p>
-          {characters.map((c, i) => (
-          <button className="character-selection-button" key={i} onClick={() => (setCharacter(c), isIntroShown(false))}>{c}</button>
-          ))}
-        </>
-      ) : (
-        <>
-          <Board 
-            level={level} 
-            sprite={character} 
-          />
-          <button className='end-game-button' onClick={() => seAcabo()}>End Game</button>
+          {!character ? (
+            <>
+              <p>Hello {player.player_username}</p>
+              <p>Choose your main character: </p>
+              {characters.map((c, i) => (
+              <button className="character-selection-button" key={i} onClick={() => (setCharacter(c), isIntroShown(false))}>{c}</button>
+              ))}
+            </>
+          ) : (
+            <>
+              <Board 
+                level={level} 
+                sprite={character} 
+              />
+              <button className='end-game-button' onClick={() => seAcabo()}>End Game</button>
+            </>
+          )}
         </>
       )}
     </>
