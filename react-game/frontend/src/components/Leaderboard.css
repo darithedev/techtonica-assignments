@@ -1,0 +1,17 @@
+#player {
+    list-style: none;
+}
+
+.close-button {
+  height: 25px;
+  width: 50px;
+  border-radius: 5px;
+  margin-top:15px;
+  border: none;
+  background-color: hsl(340, 100%, 63%, 0.2);
+}
+
+.close-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}

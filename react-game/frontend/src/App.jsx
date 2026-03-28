@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import Board from './components/Board'
+import Leaderboard from './components/Leaderboard.jsx'
+import PlayerForm from './components/PlayerForm.jsx'
+import PlayerList from './components/PlayersList.jsx'
 
 function App() {
   const characters = ["🦆","🦩","🦢"];
@@ -17,10 +20,35 @@ function App() {
     "Be careful not to get eaten by the crocodile! Three bites and the game is over!"
   ];
   const [gameOver, setGameOver] = useState(false);
+  const [screen, setScreen] = useState('existing-player-screen');
+  const [player, setPlayer] = useState(null);
+  const [leaderboard, isLeaderboardShown] = useState(false);
+  const [score, setScore] = useState(0);
+
+  const characterSelection = (selectedPlayer) => {
+    if (!selectedPlayer) return;
+    setPlayer(selectedPlayer);
+    setScreen('character-selection');
+  };
+
+  const postScore = (newScore) => {
+    return fetch("http://localhost:3000/api/games", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          player_id: player.id,
+          player_score: newScore,
+        })
+    })
+    .then((response) => {
+        return response.json();
+    });
+  };
 
   // 'Se Acabo' is spanish for its done or its over
-  const seAcabo = () => {
+  const seAcabo = async () => {
     setGameOver(true);
+    await postScore(score);
     window.location.reload();
   };
 
@@ -35,7 +63,10 @@ function App() {
         </div>
       )}
       {!dropdown ? (
-        <button className="how-to-button"onClick={() => (isOpenDropdown(true), isIntroShown(false))}>How to play</button>
+        <>
+          <button className="how-to-button"onClick={() => (isOpenDropdown(true), isIntroShown(false))}>How to play</button>
+          <button className="how-to-button"onClick={() => (setScreen('leaderboard'), isLeaderboardShown(true))}>Leaderboard</button>
+        </>
       ) : (
         <div className="dropdown-instructions">
           <h3>Here's How you Play: </h3>
@@ -52,20 +83,43 @@ function App() {
           <button className="close-button" onClick={() => (isOpenDropdown(false), isIntroShown(true))}>x</button>
         </div>
       )}
-      {!character ? (
+      {screen === 'leaderboard' && (
+        <Leaderboard 
+          isLeaderboardShown={isLeaderboardShown}
+        />
+      )}
+      {screen === 'existing-player-screen' && (
+        <PlayerList 
+          setScreen={setScreen}
+          playerSet={characterSelection}
+        />
+      )}
+      {screen === 'create-player-screen' && (
+        <PlayerForm
+          setScreen={setScreen}
+          playerSet={characterSelection}
+        />
+      )}
+      {screen === 'character-selection' && player && (
         <>
-          <p>Choose your main character: </p>
-          {characters.map((c, i) => (
-          <button className="character-selection-button" key={i} onClick={() => (setCharacter(c), isIntroShown(false))}>{c}</button>
-          ))}
-        </>
-      ) : (
-        <>
-          <Board 
-            level={level} 
-            sprite={character} 
-          />
-          <button className='end-game-button' onClick={() => seAcabo()}>End Game</button>
+          {!character ? (
+            <>
+              <p>Hello {player.player_username}</p>
+              <p>Choose your main character: </p>
+              {characters.map((c, i) => (
+              <button className="character-selection-button" key={i} onClick={() => (setCharacter(c), isIntroShown(false))}>{c}</button>
+              ))}
+            </>
+          ) : (
+            <>
+              <Board 
+                level={level} 
+                sprite={character}
+                endScore={setScore}
+              />
+              <button className='end-game-button' onClick={() => seAcabo()}>End Game</button>
+            </>
+          )}
         </>
       )}
     </>
