@@ -118,7 +118,8 @@ COPY public.games (id, player_id, player_score, created_at, updated_at) FROM std
 --
 
 COPY public.players (id, player_name, email, player_username, created_at, updated_at, score) FROM stdin;
-2	Dari Cares	DariCares@mail.com	daricares26354	2026-03-26 17:41:08.600532-04	2026-03-26 17:41:08.600532-04	8
+1	Nancy Drew	Nancy123@mail.com	nancynancy111	2026-03-26 17:41:08.600532-04	2026-03-26 17:41:08.600532-04	0
+2	Dari Cares	DariCares@mail.com	daricares26354	2026-03-26 17:41:08.600532-04	2026-03-26 17:41:08.600532-04	0
 3	Riley Rider	Riley@mail.com	rileyrides123	2026-03-26 19:11:28.269804-04	2026-03-26 19:11:28.269804-04	0
 4	Bobo TheCoolKat	BOBO@mail.com	bobothesupportiveking1991	2026-03-26 19:12:21.503538-04	2026-03-26 19:12:21.503538-04	0
 5	Amber Riley	amber@mail.com	gamergamesa	2026-03-26 19:12:51.653417-04	2026-03-26 19:12:51.653417-04	0
